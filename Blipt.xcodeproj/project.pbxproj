@@ -80,6 +80,7 @@
 		CFEBE8E5FDAE1B01EECB6601 /* PlateDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E742C282B878B11CC6A53553 /* PlateDetector.swift */; };
 		DC21A5AA1336AF629ED3C7E6 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC4AAC064E00B95A64B61E8 /* ShareCardView.swift */; };
 		DF87E18DA14DC785F8D7FEB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F011E99F2D74D97F86369 /* ContentView.swift */; };
+		E13DB8237BCD34657077D800 /* ImagePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F6200865669492A623D132 /* ImagePreprocessor.swift */; };
 		E82624E10E2D709CDFC27BAC /* MapSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E42B86F14D4BEA121A54337 /* MapSnippetView.swift */; };
 		F65B65586CB931A854E803FB /* FuzzyMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B1F29B4E70B8D1755E8C /* FuzzyMatcherTests.swift */; };
 		FA0167464DA22140E7CE9D37 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AAC1115916F84BF26514A2 /* BrowseView.swift */; };
@@ -115,6 +116,7 @@
 		2C105008E7448D61F011277A /* Configuration.storekit */ = {isa = PBXFileReference; path = Configuration.storekit; sourceTree = "<group>"; };
 		2F6E47C96DE5711021E831E2 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
 		3077EDAAD09E4791C57152EC /* CountryDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataServiceProtocol.swift; sourceTree = "<group>"; };
+		33F6200865669492A623D132 /* ImagePreprocessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreprocessor.swift; sourceTree = "<group>"; };
 		3C2B945617C9139B74215F29 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		3D5AB3E80D2BFB3912AA695C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		45B6738809BAEC057F2AB8E0 /* SubmissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionService.swift; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 		9CE5E679925128A01032D9B6 /* OCR */ = {
 			isa = PBXGroup;
 			children = (
+				33F6200865669492A623D132 /* ImagePreprocessor.swift */,
 				246846DEC263EEE9C1483264 /* MockOCRService.swift */,
 				0F4D360BBC774EEDDEC154C2 /* OCRServiceProtocol.swift */,
 				A530CA83660FB6792CFA6CBA /* VisionOCRService.swift */,
@@ -614,6 +617,7 @@
 				3257DF005B0EFA59142AF14A /* FuzzyMatcher.swift in Sources */,
 				95470A8045C0E26350AFCDBF /* HistoryView.swift in Sources */,
 				C9970405B803394FD9C655F5 /* HistoryViewModel.swift in Sources */,
+				E13DB8237BCD34657077D800 /* ImagePreprocessor.swift in Sources */,
 				7AE68E78A37297A2E7E93CDE /* IndianPlateParser.swift in Sources */,
 				5D92370D697EF6309244C3D0 /* IndianState.swift in Sources */,
 				8F8B837A8EF93B1A5C03E118 /* InsuranceCardView.swift in Sources */,

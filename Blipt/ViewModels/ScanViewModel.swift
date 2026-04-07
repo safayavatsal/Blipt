@@ -125,10 +125,13 @@ final class ScanViewModel {
         }
     }
 
+    private let preprocessor = ImagePreprocessor()
+
     func processImage(_ cgImage: CGImage) async {
         scanState = .processing
 
         do {
+            // Try raw image first
             let ocrResults = try await ocrService.recognizeText(in: cgImage)
 
             for ocrResult in ocrResults {
@@ -142,6 +145,27 @@ final class ScanViewModel {
 
             let allText = ocrResults.map(\.text).joined(separator: " ")
             if let parseResult = parser.parse(ocrText: allText) {
+                let location = dataService.lookup(plate: parseResult)
+                scanState = .result(parseResult, location)
+                saveToHistory(plate: parseResult, location: location)
+                return
+            }
+
+            // Retry with preprocessed image (crop, contrast, sharpen)
+            let enhanced = await preprocessor.preprocess(cgImage)
+            let retryResults = try await ocrService.recognizeText(in: enhanced)
+
+            for ocrResult in retryResults {
+                if let parseResult = parser.parse(ocrText: ocrResult.text) {
+                    let location = dataService.lookup(plate: parseResult)
+                    scanState = .result(parseResult, location)
+                    saveToHistory(plate: parseResult, location: location)
+                    return
+                }
+            }
+
+            let retryAllText = retryResults.map(\.text).joined(separator: " ")
+            if let parseResult = parser.parse(ocrText: retryAllText) {
                 let location = dataService.lookup(plate: parseResult)
                 scanState = .result(parseResult, location)
                 saveToHistory(plate: parseResult, location: location)

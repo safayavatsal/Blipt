@@ -133,4 +133,27 @@ final class CameraManager: NSObject {
             isFlashOn = false
         }
     }
+
+    // MARK: - Low Light Detection
+
+    var isLowLight: Bool {
+        guard let device = AVCaptureDevice.default(for: .video) else { return false }
+        // ISO above 800 or exposure duration above 1/30s suggests low light
+        return device.iso > 800 || device.exposureDuration.seconds > (1.0 / 30.0)
+    }
+
+    /// Auto-enable torch in low light conditions.
+    func autoTorchIfNeeded() {
+        guard !isFlashOn, isLowLight else { return }
+        guard let device = AVCaptureDevice.default(for: .video), device.hasTorch else { return }
+
+        isFlashOn = true
+        do {
+            try device.lockForConfiguration()
+            device.torchMode = .on
+            device.unlockForConfiguration()
+        } catch {
+            isFlashOn = false
+        }
+    }
 }

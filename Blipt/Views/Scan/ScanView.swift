@@ -173,6 +173,24 @@ struct ScanView: View {
 
     private var bottomControls: some View {
         VStack(spacing: 16) {
+            // Low light indicator
+            if viewModel.cameraManager.isLowLight {
+                HStack(spacing: 6) {
+                    Image(systemName: "moon.fill")
+                        .font(.caption)
+                    Text("Low Light — Flash Recommended")
+                        .font(.caption.weight(.medium))
+                }
+                .foregroundStyle(.yellow)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 6)
+                .background(.black.opacity(0.6))
+                .clipShape(Capsule())
+                .onAppear {
+                    viewModel.cameraManager.autoTorchIfNeeded()
+                }
+            }
+
             // Hint text
             if viewModel.plateDetector.currentDetection == nil && !viewModel.plateDetector.isConfirmed {
                 Text("Point camera at a license plate")
