@@ -88,10 +88,26 @@ struct OnboardingView: View {
     private var page1: some View {
         VStack(spacing: 0) {
             Spacer()
+                .frame(height: 32)
 
-            // Illustration area
+            // Text at top
+            VStack(spacing: 12) {
+                Text("Point Your Camera")
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .foregroundStyle(.white)
+
+                Text("Aim at any Indian license plate.\nBlipt reads it instantly using on-device AI —\nno internet needed.")
+                    .font(.body)
+                    .foregroundStyle(.white.opacity(0.5))
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(4)
+                    .padding(.horizontal, 32)
+            }
+
+            Spacer()
+
+            // Illustration below
             ZStack {
-                // Outer glow
                 Circle()
                     .fill(BliptTheme.accent.opacity(0.08))
                     .frame(width: 220, height: 220)
@@ -100,13 +116,11 @@ struct OnboardingView: View {
                     .fill(BliptTheme.accent.opacity(0.04))
                     .frame(width: 280, height: 280)
 
-                // Camera icon with plate
                 VStack(spacing: 16) {
                     Image(systemName: "camera.viewfinder")
                         .font(.system(size: 72, weight: .ultraLight))
                         .foregroundStyle(BliptTheme.accent)
 
-                    // Mini plate
                     Text("MH 12 AB 1234")
                         .font(.system(size: 14, weight: .bold, design: .monospaced))
                         .foregroundStyle(.black)
@@ -122,24 +136,6 @@ struct OnboardingView: View {
             }
 
             Spacer()
-                .frame(height: 48)
-
-            // Text
-            VStack(spacing: 12) {
-                Text("Point Your Camera")
-                    .font(.system(size: 28, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white)
-
-                Text("Aim at any Indian license plate.\nBlipt reads it instantly using on-device AI —\nno internet needed.")
-                    .font(.body)
-                    .foregroundStyle(.white.opacity(0.5))
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(4)
-                    .padding(.horizontal, 32)
-            }
-
-            Spacer()
-            Spacer()
         }
     }
 
@@ -148,10 +144,26 @@ struct OnboardingView: View {
     private var page2: some View {
         VStack(spacing: 0) {
             Spacer()
+                .frame(height: 32)
 
-            // Illustration: result card mock
+            // Text at top
             VStack(spacing: 12) {
-                // Mini plate
+                Text("Instant Results")
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .foregroundStyle(.white)
+
+                Text("Get the state, district, and RTO office\nfor any plate — with a map pin showing\nexactly where it's registered.")
+                    .font(.body)
+                    .foregroundStyle(.white.opacity(0.5))
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(4)
+                    .padding(.horizontal, 32)
+            }
+
+            Spacer()
+
+            // Illustration below
+            VStack(spacing: 12) {
                 HStack(spacing: 0) {
                     Text("IND")
                         .font(.system(size: 8, weight: .bold))
@@ -169,7 +181,6 @@ struct OnboardingView: View {
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 4))
 
-                // Result items
                 VStack(spacing: 10) {
                     resultRow(icon: "mappin.circle.fill", label: "State", value: "Maharashtra", color: BliptTheme.radarGreen)
                     resultRow(icon: "building.2.fill", label: "District", value: "Pune", color: BliptTheme.accent)
@@ -179,7 +190,6 @@ struct OnboardingView: View {
                 .background(Color.white.opacity(0.06))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
 
-                // Map placeholder
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color.white.opacity(0.04))
                     .frame(height: 60)
@@ -203,24 +213,6 @@ struct OnboardingView: View {
             .padding(.horizontal, 40)
 
             Spacer()
-                .frame(height: 48)
-
-            // Text
-            VStack(spacing: 12) {
-                Text("Instant Results")
-                    .font(.system(size: 28, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white)
-
-                Text("Get the state, district, and RTO office\nfor any plate — with a map pin showing\nexactly where it's registered.")
-                    .font(.body)
-                    .foregroundStyle(.white.opacity(0.5))
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(4)
-                    .padding(.horizontal, 32)
-            }
-
-            Spacer()
-            Spacer()
         }
     }
 
@@ -229,10 +221,26 @@ struct OnboardingView: View {
     private var page3: some View {
         VStack(spacing: 0) {
             Spacer()
+                .frame(height: 32)
 
-            // Illustration: premium features
+            // Text at top
+            VStack(spacing: 12) {
+                Text("Full Vehicle Intelligence")
+                    .font(.system(size: 28, weight: .bold, design: .rounded))
+                    .foregroundStyle(.white)
+
+                Text("Unlock everything about any vehicle.\nMake, insurance, challans, fitness —\nall from a single scan.")
+                    .font(.body)
+                    .foregroundStyle(.white.opacity(0.5))
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(4)
+                    .padding(.horizontal, 32)
+            }
+
+            Spacer()
+
+            // Illustration below
             VStack(spacing: 0) {
-                // Header
                 HStack(spacing: 8) {
                     Image(systemName: "star.circle.fill")
                         .foregroundStyle(BliptTheme.premiumGold)
@@ -259,24 +267,6 @@ struct OnboardingView: View {
             )
             .padding(.horizontal, 40)
 
-            Spacer()
-                .frame(height: 48)
-
-            // Text
-            VStack(spacing: 12) {
-                Text("Full Vehicle Intelligence")
-                    .font(.system(size: 28, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white)
-
-                Text("Unlock everything about any vehicle.\nMake, insurance, challans, fitness —\nall from a single scan.")
-                    .font(.body)
-                    .foregroundStyle(.white.opacity(0.5))
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(4)
-                    .padding(.horizontal, 32)
-            }
-
-            Spacer()
             Spacer()
         }
     }
