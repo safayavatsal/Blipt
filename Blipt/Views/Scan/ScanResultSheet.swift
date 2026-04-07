@@ -53,11 +53,9 @@ struct ScanResultSheet: View {
                         .contentShape(RoundedRectangle(cornerRadius: 12))
                 }
 
-                ShareLink(
-                    item: shareText,
-                    subject: Text("Blipt Scan Result"),
-                    message: Text(shareText)
-                ) {
+                Button {
+                    shareCard()
+                } label: {
                     Image(systemName: "square.and.arrow.up")
                         .font(.title3)
                         .padding(14)
@@ -128,11 +126,12 @@ struct ScanResultSheet: View {
         .clipShape(RoundedRectangle(cornerRadius: 14))
     }
 
-    private var shareText: String {
-        if let location {
-            "Scanned \(plate.normalizedPlate) — \(location.stateName), \(location.districtName) via Blipt"
-        } else {
-            "Scanned \(plate.normalizedPlate) via Blipt"
+    private func shareCard() {
+        guard let image = ShareCardView.renderImage(plate: plate, location: location) else { return }
+        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootVC = windowScene.windows.first?.rootViewController {
+            rootVC.present(activityVC, animated: true)
         }
     }
 }

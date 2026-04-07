@@ -2,12 +2,18 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(AppState.self) private var appState
+    @State private var historyStore = ScanHistoryStore()
 
     var body: some View {
         TabView {
             ScanView()
                 .tabItem {
                     Label("Scan", systemImage: "camera.viewfinder")
+                }
+
+            HistoryView(store: historyStore)
+                .tabItem {
+                    Label("History", systemImage: "clock.arrow.circlepath")
                 }
 
             BrowseView()

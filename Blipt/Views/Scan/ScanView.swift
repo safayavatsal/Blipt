@@ -6,6 +6,7 @@ struct ScanView: View {
     @State private var viewModel = ScanViewModel()
     @State private var showResult = false
     @State private var showFullResult = false
+    @State private var showManualEntry = false
 
     var body: some View {
         ZStack {
@@ -47,6 +48,14 @@ struct ScanView: View {
                     image: viewModel.capturedImage
                 )
             }
+        }
+        .sheet(isPresented: $showManualEntry) {
+            ManualEntryView(
+                parser: PlateParserFactory.parser(for: appState.selectedCountry),
+                dataService: viewModel.country == .india ? RTODataService() : MoroccoDataService() as CountryDataServiceProtocol,
+                historyStore: viewModel.historyStore,
+                country: viewModel.country
+            )
         }
         .alert("Scan Error", isPresented: .init(
             get: { if case .error = viewModel.scanState { return true } else { return false } },
@@ -210,9 +219,18 @@ struct ScanView: View {
                 }
                 .accessibilityLabel("Capture plate")
 
-                // Spacer for symmetry
-                Color.clear
-                    .frame(width: 52, height: 52)
+                // Manual entry
+                Button {
+                    showManualEntry = true
+                } label: {
+                    Image(systemName: "keyboard")
+                        .font(.title2)
+                        .padding(14)
+                        .background(.ultraThinMaterial)
+                        .clipShape(Circle())
+                        .foregroundStyle(.white)
+                }
+                .accessibilityLabel("Type plate number manually")
             }
         }
         .padding(.bottom, 40)

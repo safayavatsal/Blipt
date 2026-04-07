@@ -32,6 +32,9 @@ final class ScanViewModel {
     private let indianDataService = RTODataService()
     private let moroccoDataService = MoroccoDataService()
 
+    // History
+    var historyStore = ScanHistoryStore()
+
     private(set) var country: Country
 
     init(
@@ -87,12 +90,14 @@ final class ScanViewModel {
         guard let detection = plateDetector.currentDetection else { return }
         let location = dataService.lookup(plate: detection.parseResult)
         scanState = .result(detection.parseResult, location)
+        saveToHistory(plate: detection.parseResult, location: location)
     }
 
     func manualCapture() {
         if let detection = plateDetector.currentDetection {
             let location = dataService.lookup(plate: detection.parseResult)
             scanState = .result(detection.parseResult, location)
+            saveToHistory(plate: detection.parseResult, location: location)
         } else {
             scanState = .error("No plate detected. Try holding the camera steady.")
         }
@@ -130,6 +135,7 @@ final class ScanViewModel {
                 if let parseResult = parser.parse(ocrText: ocrResult.text) {
                     let location = dataService.lookup(plate: parseResult)
                     scanState = .result(parseResult, location)
+                    saveToHistory(plate: parseResult, location: location)
                     return
                 }
             }
@@ -138,6 +144,7 @@ final class ScanViewModel {
             if let parseResult = parser.parse(ocrText: allText) {
                 let location = dataService.lookup(plate: parseResult)
                 scanState = .result(parseResult, location)
+                saveToHistory(plate: parseResult, location: location)
                 return
             }
 
@@ -159,5 +166,22 @@ final class ScanViewModel {
     func resumeCamera() {
         reset()
         startCamera()
+    }
+
+    // MARK: - History
+
+    private func saveToHistory(plate: PlateParseResult, location: LocationInfo?) {
+        let item = ScanHistoryItem(
+            plate: plate.rawText,
+            normalizedPlate: plate.normalizedPlate,
+            stateName: location?.stateName,
+            stateCode: location?.stateCode,
+            districtName: location?.districtName,
+            rtoName: location?.rtoName,
+            country: country.rawValue,
+            format: plate.format.rawValue,
+            confidence: plate.confidence
+        )
+        historyStore.add(item)
     }
 }

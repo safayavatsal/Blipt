@@ -27,6 +27,7 @@
 		3257DF005B0EFA59142AF14A /* FuzzyMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C42F58C3272ED4EBFC4DC /* FuzzyMatcher.swift */; };
 		360FB9AF3A58A1FE2BE49AD1 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677C0074F4BF3F32907A94A /* CameraPreviewView.swift */; };
 		36BA11978C67BD1C9F4DEA4D /* MockOCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246846DEC263EEE9C1483264 /* MockOCRService.swift */; };
+		3BF470CE72069E20FB41D7C2 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E998EFF15FA73173A1F9C2C6 /* OnboardingView.swift */; };
 		3DD1960095EB49BFAD41B4D0 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215093FED9A2F8750D48F9E5 /* CameraManager.swift */; };
 		3E914D553D2EE6E15FDAD6C7 /* BrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803AF99ECDE30266BDB306B /* BrowseViewModel.swift */; };
 		3F17B190E6B8CEE6468CEB85 /* PlateNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055EED2D6DF6EF42A4167DB4 /* PlateNormalizer.swift */; };
@@ -63,16 +64,21 @@
 		8F1B77EDEA920829AE173381 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3D7FE33D8CBC948623C32 /* ScanView.swift */; };
 		8F8B837A8EF93B1A5C03E118 /* InsuranceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5883CEA456C9688294DCF10E /* InsuranceCardView.swift */; };
 		93369370E0741FF39EAAF1E8 /* IndianPlateParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA1F54C337E5F2160009F3 /* IndianPlateParserTests.swift */; };
+		95470A8045C0E26350AFCDBF /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8980D5E76559A6E1E135275 /* HistoryView.swift */; };
+		964DC6873E9494FD50D205F2 /* ManualEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59276C8E12F136F384AFB8F7 /* ManualEntryView.swift */; };
 		98D40A11840CAD4547967517 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310273C2A8ED5056D3BCB82 /* AppConstants.swift */; };
 		9D54FBEF1D76B0FB193DCED0 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92777237A863E624E977763 /* DependencyContainer.swift */; };
 		A326370A9C14CE5032BE2C7A /* CountryDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077EDAAD09E4791C57152EC /* CountryDataServiceProtocol.swift */; };
 		AB6370D5A70B8658EAB4BC7C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB69839004EF62D9034E520 /* APIError.swift */; };
+		ABFDA3DAB32AFF371BCD44DC /* ScanHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6C00B82FFDF750B5BA472 /* ScanHistory.swift */; };
 		AC9F9A7275345F439DA3312B /* DataUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0676F2E83B035C7B6BD6926C /* DataUpdateService.swift */; };
 		B16165581CA60EF4C6BCF92E /* VehicleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF997ABBA18EDBEDEDF8652 /* VehicleDetailViewModel.swift */; };
 		B4B66492B5B7CF44C0311033 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C7E15E745CA7F16180A7 /* ResultViewModel.swift */; };
 		BFBCCB6F0247F6D28B2EF5F5 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6E47C96DE5711021E831E2 /* LoadingOverlay.swift */; };
 		C987E67B401681858435DFF3 /* PaywallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3036C26BC5E56095CA39EAF /* PaywallManager.swift */; };
+		C9970405B803394FD9C655F5 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B7558AEB226436EC798BA /* HistoryViewModel.swift */; };
 		CFEBE8E5FDAE1B01EECB6601 /* PlateDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E742C282B878B11CC6A53553 /* PlateDetector.swift */; };
+		DC21A5AA1336AF629ED3C7E6 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC4AAC064E00B95A64B61E8 /* ShareCardView.swift */; };
 		DF87E18DA14DC785F8D7FEB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F011E99F2D74D97F86369 /* ContentView.swift */; };
 		E82624E10E2D709CDFC27BAC /* MapSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E42B86F14D4BEA121A54337 /* MapSnippetView.swift */; };
 		F65B65586CB931A854E803FB /* FuzzyMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B1F29B4E70B8D1755E8C /* FuzzyMatcherTests.swift */; };
@@ -115,11 +121,14 @@
 		45DFE7303EF639CEBDB636CB /* DataSubmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSubmissionView.swift; sourceTree = "<group>"; };
 		47AAC1115916F84BF26514A2 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		4A6D9717AE633A8B0417CD94 /* ScanResultSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultSheet.swift; sourceTree = "<group>"; };
+		4AC4AAC064E00B95A64B61E8 /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
 		4B57F4C3CF3750A8496E4262 /* IndianPlateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianPlateParser.swift; sourceTree = "<group>"; };
 		5883CEA456C9688294DCF10E /* InsuranceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceCardView.swift; sourceTree = "<group>"; };
+		59276C8E12F136F384AFB8F7 /* ManualEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualEntryView.swift; sourceTree = "<group>"; };
 		5CE565C509F21A6E9D6D5BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DF138C8F0B0B87B66E01160 /* MoroccanPlateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoroccanPlateParser.swift; sourceTree = "<group>"; };
 		5E3114CC41536B581643E64C /* MoroccoDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoroccoDataService.swift; sourceTree = "<group>"; };
+		5E3B7558AEB226436EC798BA /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		610F920024683C64A300164F /* RTODataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTODataService.swift; sourceTree = "<group>"; };
 		63F1C553BDE793F34C26F2C7 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		643143D5548F71E92828AF06 /* LicensePlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensePlate.swift; sourceTree = "<group>"; };
@@ -148,6 +157,7 @@
 		ACAD5AC867FBAD352446B099 /* FeatureComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureComparisonView.swift; sourceTree = "<group>"; };
 		ACD6670CF3499FBB604C7823 /* PlateOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateOverlayView.swift; sourceTree = "<group>"; };
 		ADA63FCEC68119ADE5321334 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
+		AED6C00B82FFDF750B5BA472 /* ScanHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHistory.swift; sourceTree = "<group>"; };
 		B3036C26BC5E56095CA39EAF /* PaywallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallManager.swift; sourceTree = "<group>"; };
 		B605E1F47FB919EC51E03FF6 /* VehicleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailView.swift; sourceTree = "<group>"; };
 		B73E258B5C16E68B876D13F7 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -159,8 +169,10 @@
 		CE7BA823BA447F8C51A0FFC8 /* StateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailView.swift; sourceTree = "<group>"; };
 		CFD487369ABDE1D823875E29 /* ErrorBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBannerView.swift; sourceTree = "<group>"; };
 		D6BACC25747AA70B8435F647 /* RTOOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTOOffice.swift; sourceTree = "<group>"; };
+		D8980D5E76559A6E1E135275 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		E3181CE6F49BBF4FF0E738B4 /* PlateResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateResultView.swift; sourceTree = "<group>"; };
 		E742C282B878B11CC6A53553 /* PlateDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateDetector.swift; sourceTree = "<group>"; };
+		E998EFF15FA73173A1F9C2C6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EB7C42F58C3272ED4EBFC4DC /* FuzzyMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyMatcher.swift; sourceTree = "<group>"; };
 		EDE18645DDBC27584C5216B3 /* PlateVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateVisualizerView.swift; sourceTree = "<group>"; };
 		EE26DA2896ED8750F02CDB27 /* BliptTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BliptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +208,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		30B46B4E51BF0F4084804544 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				D8980D5E76559A6E1E135275 /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		30E8D69FABF41FEBD2EDBCD5 /* Blipt */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				1803AF99ECDE30266BDB306B /* BrowseViewModel.swift */,
+				5E3B7558AEB226436EC798BA /* HistoryViewModel.swift */,
 				9EC5C7E15E745CA7F16180A7 /* ResultViewModel.swift */,
 				ADA63FCEC68119ADE5321334 /* ScanViewModel.swift */,
 				808C64D1D8C805C3A81B8F4F /* SubscriptionViewModel.swift */,
@@ -299,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				7677C0074F4BF3F32907A94A /* CameraPreviewView.swift */,
+				59276C8E12F136F384AFB8F7 /* ManualEntryView.swift */,
 				ACD6670CF3499FBB604C7823 /* PlateOverlayView.swift */,
 				4A6D9717AE633A8B0417CD94 /* ScanResultSheet.swift */,
 				18F3D7FE33D8CBC948623C32 /* ScanView.swift */,
@@ -329,6 +351,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		8894D1ED103A2589E6545F75 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E998EFF15FA73173A1F9C2C6 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		90926709CA88E3B62FC61975 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +367,7 @@
 				2F6E47C96DE5711021E831E2 /* LoadingOverlay.swift */,
 				0E42B86F14D4BEA121A54337 /* MapSnippetView.swift */,
 				EDE18645DDBC27584C5216B3 /* PlateVisualizerView.swift */,
+				4AC4AAC064E00B95A64B61E8 /* ShareCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -371,6 +402,7 @@
 				643143D5548F71E92828AF06 /* LicensePlate.swift */,
 				EF2704F6AD0B82D62FB21682 /* MoroccanCity.swift */,
 				D6BACC25747AA70B8435F647 /* RTOOffice.swift */,
+				AED6C00B82FFDF750B5BA472 /* ScanHistory.swift */,
 				0A94EE644FBA2D2746D5A5D9 /* VehicleInfo.swift */,
 			);
 			path = Domain;
@@ -404,6 +436,8 @@
 				63F1C553BDE793F34C26F2C7 /* SplashView.swift */,
 				E6FC17C55F9CA30F53686CFB /* Browse */,
 				90926709CA88E3B62FC61975 /* Components */,
+				30B46B4E51BF0F4084804544 /* History */,
+				8894D1ED103A2589E6545F75 /* Onboarding */,
 				7F882C174FCC51B10B9068DF /* Paywall */,
 				E0B8703B4A1726AE5049B9B6 /* Result */,
 				659B9094E634CC376FAA6901 /* Scan */,
@@ -578,17 +612,21 @@
 				496A252E84F0D241D5DCE2AF /* FeatureComparisonView.swift in Sources */,
 				5A469B99ACD3B9F0D6516A5B /* FitnessCardView.swift in Sources */,
 				3257DF005B0EFA59142AF14A /* FuzzyMatcher.swift in Sources */,
+				95470A8045C0E26350AFCDBF /* HistoryView.swift in Sources */,
+				C9970405B803394FD9C655F5 /* HistoryViewModel.swift in Sources */,
 				7AE68E78A37297A2E7E93CDE /* IndianPlateParser.swift in Sources */,
 				5D92370D697EF6309244C3D0 /* IndianState.swift in Sources */,
 				8F8B837A8EF93B1A5C03E118 /* InsuranceCardView.swift in Sources */,
 				1714871B97BE8E2E6C1F4DC2 /* LicensePlate.swift in Sources */,
 				BFBCCB6F0247F6D28B2EF5F5 /* LoadingOverlay.swift in Sources */,
+				964DC6873E9494FD50D205F2 /* ManualEntryView.swift in Sources */,
 				E82624E10E2D709CDFC27BAC /* MapSnippetView.swift in Sources */,
 				36BA11978C67BD1C9F4DEA4D /* MockOCRService.swift in Sources */,
 				8D12368FF9C2AE84220A1B6C /* MoroccanCity.swift in Sources */,
 				306E4D5D431E7AA71B066CFB /* MoroccanPlateParser.swift in Sources */,
 				06B2EF97E14E657AC5674A4E /* MoroccoDataService.swift in Sources */,
 				7E4093E3C6B27879A565A5BD /* OCRServiceProtocol.swift in Sources */,
+				3BF470CE72069E20FB41D7C2 /* OnboardingView.swift in Sources */,
 				C987E67B401681858435DFF3 /* PaywallManager.swift in Sources */,
 				22F0967F2A593639CC1EDFFD /* PaywallView.swift in Sources */,
 				CFEBE8E5FDAE1B01EECB6601 /* PlateDetector.swift in Sources */,
@@ -601,10 +639,12 @@
 				84653C8528440A325A07F4E4 /* RTOOffice.swift in Sources */,
 				1159F3A79D8F9FE9E05EFCFE /* RTORowView.swift in Sources */,
 				B4B66492B5B7CF44C0311033 /* ResultViewModel.swift in Sources */,
+				ABFDA3DAB32AFF371BCD44DC /* ScanHistory.swift in Sources */,
 				8976F114E6C1115687E23521 /* ScanResultSheet.swift in Sources */,
 				8F1B77EDEA920829AE173381 /* ScanView.swift in Sources */,
 				76220D6CDE5C1E3153006B80 /* ScanViewModel.swift in Sources */,
 				6F64ABC877CADFDCB7F3BAB3 /* SettingsView.swift in Sources */,
+				DC21A5AA1336AF629ED3C7E6 /* ShareCardView.swift in Sources */,
 				2A19B468700DADA61EBFA9C7 /* SplashView.swift in Sources */,
 				26C8CD27E17DF7F30305DB94 /* StateDetailView.swift in Sources */,
 				2A2924FD89C72F44EE721AC8 /* SubmissionService.swift in Sources */,

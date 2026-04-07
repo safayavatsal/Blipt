@@ -605,35 +605,284 @@ static let looseStandardPattern = #"^([A-Z0-9]{2})\s*[-]?\s*([0-9OoIl]{2})\s*[-]
 | 2: Camera UX | 2-3 | Live camera scanning with real-time detection | Yes | No |
 | 3: Backend + Intel | 3-5 | Vehicle details, insurance, challans, subscription | Partial | Yes |
 | 4: Global | 5+ | Morocco support, country selector, analytics | Yes | Yes |
+| **5: Engagement** | — | History, onboarding, manual entry, share card | Yes | Indirect |
+| **6: Accuracy** | — | Image preprocessing, night mode, multi-plate, CoreML | Yes | No |
+| **7: Revenue** | — | Usage paywall, fleet lookup, referrals | Partial | Yes |
+| **8: Depth** | — | RTO details, insurance alerts, vehicle compare | Partial | Yes |
+| **9: Platform** | — | Widget, Siri, Apple Watch, CarPlay, App Clip | Yes | Indirect |
+| **10: Scale** | — | More countries, localization, backend DB, A/B tests | Yes | Yes |
 
 ---
 
 ## Verification Plan
 
-### Phase 1 Verification
-1. Run all unit tests: `cmd+U` in Xcode
-2. Launch app on simulator → pick a photo of an Indian plate from library → verify state + district + map
-3. Test with plates from different states (MH, DL, KA, TN)
-4. Test with BH series plate
-5. Test with garbage text → verify "not found" state
+### Phase 1-4 Verification (Completed)
+1. Run all unit tests: `cmd+U` — 66 tests, 0 failures
+2. Launch app on simulator → pick a photo of an Indian plate → verify state + district + map
+3. Test with plates from different states (MH, DL, KA, TN) + BH series
+4. Run on real device → point camera at plate → verify bounding box + haptic confirmation
+5. Browse tab search with "Pune", "Mumbai", "MH12"
+6. Settings → switch to Morocco → verify cities load, scan works
+7. Settings → Upgrade to Premium → verify product cards + purchase flow (StoreKit test config)
+8. Test offline → plate-to-location works, vehicle details shows offline message
 
-### Phase 2 Verification
-1. Run on **real device** (camera not available in simulator)
-2. Point camera at an Indian plate image on screen → verify bounding box appears
-3. Hold steady → verify plate confirms with haptic after 3 consistent reads
-4. Verify result sheet shows correct location + map
-5. Test Browse tab search with "Pune", "Mumbai", "MH12"
+---
 
-### Phase 3 Verification
-1. Deploy backend to Railway → verify `/health` returns 200
-2. Test vehicle lookup via curl: `curl -X POST .../api/v1/vehicle/lookup -d '{"plate":"MH12AB1234"}'`
-3. In app: scan plate → tap "View Full Details" → verify vehicle info displays
-4. Test as free user → verify paywall appears
-5. Test subscription purchase via StoreKit test config
-6. Test offline → verify plate-to-location works, vehicle details shows offline message
+## Phase 5: Engagement & Retention
 
-### Phase 4 Verification
-1. Switch to Morocco in settings → verify cities load in Browse tab
-2. Scan a Moroccan plate → verify city identification works
-3. Switch back to India → verify full functionality
-4. Verify analytics events in Firebase/TelemetryDeck dashboard
+### Milestone: "Users come back daily — scan history, onboarding, sharing make the app sticky"
+
+### 5.1 Scan History
+- [ ] Create `Models/Domain/ScanHistory.swift` — persisted scan records using SwiftData or UserDefaults/JSON
+- [ ] Create `ViewModels/HistoryViewModel.swift` — load, search, delete history items
+- [ ] Create `Views/History/HistoryView.swift` — list of past scans with plate, location, timestamp, swipe-to-delete
+- [ ] Create `Views/History/HistoryRowView.swift` — compact row: plate badge, state name, relative time
+- [ ] Replace Browse as second tab → **Scan | History | Browse | Settings** (4 tabs)
+- [ ] Auto-save every successful scan to history
+- [ ] Free users: last 5 scans. Premium: unlimited history
+- [ ] **Acceptance**: Scans persist across app launches, searchable, deletable, premium gate on count
+
+### 5.2 Onboarding Flow
+- [ ] Create `Views/Onboarding/OnboardingView.swift` — 3-page PageTabView
+  - Page 1: "Point Your Camera" — camera illustration + "Scan any Indian license plate"
+  - Page 2: "Instant Results" — result card illustration + "State, district, RTO in seconds"
+  - Page 3: "Full Intelligence" — vehicle details illustration + "Unlock make, insurance, challans"
+- [ ] "Get Started" button → dismiss onboarding, mark as completed in UserDefaults
+- [ ] Show only on first launch (`hasCompletedOnboarding` flag)
+- [ ] **Acceptance**: Shows on first launch only, swipeable, skip/get-started works
+
+### 5.3 Manual Plate Entry
+- [ ] Add text field to ScanView — "Or type a plate number"
+- [ ] Create `Views/Scan/ManualEntryView.swift` — formatted text field with plate preview, "Look Up" button
+- [ ] Validate input through IndianPlateParser before lookup
+- [ ] Route to same PlateResultView
+- [ ] **Acceptance**: Type "MH12AB1234" → see Pune result, invalid input shows error
+
+### 5.4 Share as Branded Card
+- [ ] Create `Views/Components/ShareCardView.swift` — renders plate + location + map as a branded image
+- [ ] Add Blipt logo watermark + "Scanned with Blipt" footer
+- [ ] Use `ImageRenderer` to convert SwiftUI view → UIImage → share via `ShareLink`
+- [ ] **Acceptance**: Share button produces a clean branded image, shareable to WhatsApp/Instagram
+
+### 5.5 Multi-Plate Detection
+- [ ] Update PlateDetector to collect all valid plates per frame (not just first match)
+- [ ] Create `Views/Scan/PlateListOverlay.swift` — show numbered badges on each detected plate
+- [ ] User taps a badge → selects that plate for lookup
+- [ ] **Acceptance**: Two plates in frame → two badges → tap selects correct one
+
+### Phase 5 Risks
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|-----------|
+| History data migration | Low | Medium | Use versioned schema, SwiftData handles migrations |
+| Manual entry abuse | Medium | Low | Same rate limits as camera scan |
+| Share card rendering perf | Low | Low | ImageRenderer is fast for simple views |
+
+---
+
+## Phase 6: Accuracy & Low-Light
+
+### Milestone: "OCR works reliably on dirty, angled, night-time plates"
+
+### 6.1 Image Preprocessing Pipeline
+- [ ] Create `Services/OCR/ImagePreprocessor.swift`
+- [ ] Step 1: `VNDetectRectanglesRequest` to find plate rectangle → crop
+- [ ] Step 2: Perspective correction (deskew) using `CIFilter.perspectiveCorrection`
+- [ ] Step 3: Contrast enhancement (`CIFilter.colorControls` — increase contrast, brightness)
+- [ ] Step 4: Sharpen (`CIFilter.sharpenLuminance`)
+- [ ] Plug into VisionOCRService: preprocess → OCR
+- [ ] A/B test: compare accuracy with and without preprocessing on 50 test images
+- [ ] **Acceptance**: >15% improvement on angled/dirty plate accuracy
+
+### 6.2 Night Mode
+- [ ] Detect low ambient light via `AVCaptureDevice.iso` / `exposureDuration`
+- [ ] Auto-enable torch in low light (with user toggle)
+- [ ] Increase camera exposure compensation
+- [ ] Apply stronger contrast preprocessing for night images
+- [ ] UI indicator: "Low Light — Flash On" badge
+- [ ] **Acceptance**: Readable plates in parking garage lighting
+
+### 6.3 CoreML Custom Plate Model (Future)
+- [ ] Collect 1,000+ Indian plate images with labels
+- [ ] Train CreateML text recognition model on Indian plate fonts (embossed, painted, Devanagari)
+- [ ] Export as `.mlmodel`, bundle in app
+- [ ] Use as primary recognizer, fall back to Apple Vision if CoreML confidence < 0.7
+- [ ] **Acceptance**: >20% accuracy improvement on difficult plates vs Vision alone
+
+### Phase 6 Risks
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|-----------|
+| Preprocessing slows detection | Medium | Medium | Only preprocess on manual capture, not live frames |
+| CoreML model size | Medium | Low | Quantize to reduce size, download on demand |
+
+---
+
+## Phase 7: Revenue Optimization
+
+### Milestone: "Higher conversion rate, more revenue streams"
+
+### 7.1 Usage-Based Paywall
+- [ ] Replace hard free/paid split with 3 free vehicle lookups per month
+- [ ] Track lookup count in UserDefaults (reset monthly)
+- [ ] After 3 lookups → show paywall with "You've used your free lookups"
+- [ ] Premium: unlimited lookups
+- [ ] **Acceptance**: 4th lookup triggers paywall, counter resets on month boundary
+
+### 7.2 Fleet / Bulk Lookup
+- [ ] Create `Views/Fleet/FleetUploadView.swift` — CSV upload or multi-plate entry
+- [ ] Backend: `POST /api/v1/vehicle/bulk` — accepts array of plates, returns batch results
+- [ ] Create `Views/Fleet/FleetResultsView.swift` — table of plates + status
+- [ ] Export as CSV/PDF
+- [ ] Separate pricing tier (e.g., $19.99/month for 100 lookups)
+- [ ] **Acceptance**: Upload 10 plates → get 10 results → export works
+
+### 7.3 Referral Program
+- [ ] Generate unique referral codes per user
+- [ ] "Give 3 free lookups, get 3 free lookups" mechanic
+- [ ] Track referrals via backend
+- [ ] Share referral link from Settings
+- [ ] **Acceptance**: Referral code grants bonus lookups to both parties
+
+### Phase 7 Risks
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|-----------|
+| Usage paywall reduces engagement | Medium | High | A/B test vs current hard gate |
+| Fleet API cost | Medium | Medium | Higher pricing tier covers Surepass costs |
+
+---
+
+## Phase 8: Feature Depth
+
+### Milestone: "App becomes indispensable for vehicle-related decisions"
+
+### 8.1 RTO Office Details
+- [ ] Extend `RTOOffice` model with `address`, `phone`, `workingHours`
+- [ ] Create `Views/Result/RTODetailView.swift` — full RTO info + "Get Directions" (Apple Maps deep link)
+- [ ] Add data to `indian_rto_data.json` (phone numbers, addresses)
+- [ ] **Acceptance**: Tap RTO name → see address, phone, directions button
+
+### 8.2 Insurance Expiry Alerts
+- [ ] After viewing vehicle details, offer "Remind me before expiry"
+- [ ] Schedule local notification 30 days before insurance expiry
+- [ ] Create `Services/NotificationManager.swift` — request permission, schedule, cancel
+- [ ] **Acceptance**: Notification fires 30 days before expiry date
+
+### 8.3 Vehicle Comparison
+- [ ] Create `Views/Compare/CompareView.swift` — side-by-side comparison of two scanned vehicles
+- [ ] Show: make, model, year, fuel, insurance status, RC status, fitness
+- [ ] Highlight differences (e.g., one expired insurance, one active)
+- [ ] Access from History: long-press two items → "Compare"
+- [ ] **Acceptance**: Select two vehicles → see clear comparison with highlights
+
+### 8.4 RC Verification Badge
+- [ ] Compute trust score from: RC status (ACTIVE), insurance (valid), fitness (valid), challans (none pending)
+- [ ] Display as: green "Verified", yellow "Caution", red "Issues Found"
+- [ ] Show on VehicleDetailView and scan result
+- [ ] **Acceptance**: Active RC + valid insurance + no challans = green badge
+
+### 8.5 Plate Photo Gallery
+- [ ] Save captured plate image to app's Documents directory alongside scan record
+- [ ] Show thumbnail in History list
+- [ ] Tap to view full image
+- [ ] **Acceptance**: Scanned plate photo visible in history, persists across launches
+
+### Phase 8 Risks
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|-----------|
+| RTO phone data stale | High | Low | Mark as "may be outdated", allow user submissions |
+| Notification permission denied | Medium | Low | Graceful fallback, explain value in prompt |
+
+---
+
+## Phase 9: Platform Expansion
+
+### Milestone: "Blipt is everywhere — home screen, Siri, wrist, car"
+
+### 9.1 Home Screen Widget
+- [ ] Create WidgetKit extension: `BliptWidget`
+- [ ] Small widget: last scanned plate + state
+- [ ] Medium widget: last 3 scans
+- [ ] Tap → opens app to that scan result
+- [ ] **Acceptance**: Widget shows on home screen, updates after each scan
+
+### 9.2 Siri Shortcuts
+- [ ] Create `AppIntents` for "Scan a plate" (opens camera) and "Look up [plate]" (returns result)
+- [ ] Donate intents after each scan for Siri suggestions
+- [ ] **Acceptance**: "Hey Siri, scan a plate" opens camera, "Look up MH12AB1234" returns result
+
+### 9.3 Apple Watch Companion
+- [ ] Create WatchKit extension
+- [ ] Show last scanned plate + location on watch face
+- [ ] Complication: small plate badge
+- [ ] **Acceptance**: Last scan visible on watch, tappable for details
+
+### 9.4 App Clip
+- [ ] Create App Clip target — lightweight scan experience
+- [ ] Triggered via NFC tag, QR code, or shared link
+- [ ] Scan → result → "Get the full app" upsell
+- [ ] **Acceptance**: App Clip scans plate without full install
+
+### 9.5 CarPlay Integration
+- [ ] Create CarPlay extension with CPListTemplate
+- [ ] Show recent scans list on car display
+- [ ] Passenger can trigger new scan (camera on phone, results on car screen)
+- [ ] **Acceptance**: Recent scans visible on CarPlay, tap shows detail
+
+### Phase 9 Risks
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|-----------|
+| Widget refresh limits | Medium | Low | Refresh on app foreground, timeline-based updates |
+| App Clip size limit (15MB) | Medium | Medium | Strip data files, download on demand |
+| CarPlay review guidelines | Medium | Medium | Follow Apple HIG strictly, no driver distraction |
+
+---
+
+## Phase 10: Scale & Intelligence
+
+### Milestone: "Blipt works globally, learns from usage, optimizes revenue"
+
+### 10.1 More Countries
+- [ ] UAE plate parser + RTO data
+- [ ] Saudi Arabia plate parser + data
+- [ ] UK plate parser + DVLA API integration
+- [ ] Add country to `Country` enum + `PlateParserFactory`
+- [ ] **Acceptance**: Each new country: parser + data + browse + scan works
+
+### 10.2 Localization
+- [ ] Hindi (hi), Marathi (mr), Tamil (ta) for Indian users
+- [ ] Arabic (ar) for Morocco/UAE/Saudi
+- [ ] French (fr) for Morocco
+- [ ] Use String Catalogs (`.xcstrings`) for all user-facing text
+- [ ] **Acceptance**: Switch device language → app fully translated
+
+### 10.3 Backend Database
+- [ ] Migrate from in-memory to PostgreSQL (Supabase or Railway Postgres)
+- [ ] Tables: users, lookups, subscriptions, submissions, cache
+- [ ] User accounts (Sign in with Apple)
+- [ ] Lookup history synced across devices
+- [ ] **Acceptance**: Sign in → history syncs to new device
+
+### 10.4 A/B Testing & Analytics
+- [ ] Integrate TelemetryDeck SDK via SPM
+- [ ] A/B test paywall designs (current vs usage-based vs trial)
+- [ ] Track funnel: scan → result → paywall → purchase
+- [ ] Heatmap: most scanned states/RTOs
+- [ ] **Acceptance**: Dashboard shows conversion funnel, A/B test results
+
+### 10.5 User Feedback Loop
+- [ ] "Was this result correct?" prompt after each scan (thumbs up/down)
+- [ ] Log feedback to backend (no PII — just plate format + correct/incorrect)
+- [ ] Use feedback to identify weak plate types and prioritize accuracy fixes
+- [ ] **Acceptance**: Feedback collected, dashboard shows accuracy by plate format
+
+### Phase 10 Risks
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|-----------|
+| Localization quality | Medium | Medium | Professional translation for top 3 languages, community for rest |
+| Database migration complexity | Medium | High | Start with Supabase (managed), migrate later if needed |
+| DVLA API access (UK) | High | Medium | Apply for API access early, fallback to plate-to-location only |

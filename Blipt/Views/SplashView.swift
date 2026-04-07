@@ -1,17 +1,22 @@
 import SwiftUI
 
 struct SplashView: View {
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var isActive = false
+    @State private var showOnboarding = false
     @State private var logoScale: CGFloat = 0.6
     @State private var logoOpacity: Double = 0
     @State private var textOpacity: Double = 0
 
     var body: some View {
         if isActive {
-            ContentView()
+            if showOnboarding {
+                OnboardingView()
+            } else {
+                ContentView()
+            }
         } else {
             ZStack {
-                // Background gradient
                 LinearGradient(
                     colors: [
                         BliptTheme.surfaceDark,
@@ -25,12 +30,10 @@ struct SplashView: View {
                 VStack(spacing: 20) {
                     Spacer()
 
-                    // Animated logo
                     BliptLogoView(size: 140, animated: true)
                         .scaleEffect(logoScale)
                         .opacity(logoOpacity)
 
-                    // App name
                     Text("Blipt")
                         .font(.system(size: 48, weight: .heavy, design: .rounded))
                         .foregroundStyle(
@@ -61,6 +64,7 @@ struct SplashView: View {
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     withAnimation(.easeInOut(duration: 0.4)) {
+                        showOnboarding = !hasCompletedOnboarding
                         isActive = true
                     }
                 }
