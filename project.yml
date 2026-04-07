@@ -1,0 +1,66 @@
+name: Blipt
+fileGroups:
+  - Configuration.storekit
+options:
+  bundleIdPrefix: com.blipt
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+  generateEmptyDirectories: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+schemes:
+  Blipt:
+    build:
+      targets:
+        Blipt: all
+    run:
+      config: Debug
+      storeKitConfiguration: Configuration.storekit
+    test:
+      config: Debug
+      targets:
+        - BliptTests
+    profile:
+      config: Release
+    archive:
+      config: Release
+targets:
+  Blipt:
+    type: application
+    platform: iOS
+    sources:
+      - path: Blipt
+        excludes:
+          - "**/.DS_Store"
+          - "**/*.storekit"
+    settings:
+      base:
+        INFOPLIST_FILE: Blipt/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.blipt.app
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Automatic
+        NSCameraUsageDescription: "Blipt needs camera access to scan license plates."
+        ENABLE_PREVIEWS: true
+    entitlements:
+      path: Blipt/Blipt.entitlements
+  BliptTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+        excludes:
+          - "**/.DS_Store"
+    dependencies:
+      - target: Blipt
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.blipt.tests
+        GENERATE_INFOPLIST_FILE: true
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Blipt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Blipt"
+        BUNDLE_LOADER: "$(TEST_HOST)"

@@ -1,0 +1,29 @@
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+xcuserdata/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# CocoaPods (legacy — removed)
+Pods/
+
+# IDE
+.cursor/
+.claude/
+
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,867 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B4C950DB07EEE3DA6E2FDE /* VahanAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048177084294BF8DF07F7D69 /* VahanAPIService.swift */; };
+		06B2EF97E14E657AC5674A4E /* MoroccoDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3114CC41536B581643E64C /* MoroccoDataService.swift */; };
+		0C315AD1424A7DFC80A6E163 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B945617C9139B74215F29 /* AppState.swift */; };
+		1159F3A79D8F9FE9E05EFCFE /* RTORowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC9DBC331617ABF93BCC0BB /* RTORowView.swift */; };
+		1206A7DF903EA358298085D2 /* ErrorBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD487369ABDE1D823875E29 /* ErrorBannerView.swift */; };
+		1714871B97BE8E2E6C1F4DC2 /* LicensePlate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643143D5548F71E92828AF06 /* LicensePlate.swift */; };
+		219A9A1056CBDF4F6CF5FDFB /* ConnectivityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFD888CA8645DCE87A37C67 /* ConnectivityMonitor.swift */; };
+		21BA4CA02275E792AFB2029C /* VehicleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605E1F47FB919EC51E03FF6 /* VehicleDetailView.swift */; };
+		22F0967F2A593639CC1EDFFD /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50C64F875721B25B0B7435 /* PaywallView.swift */; };
+		2530AE2644AFD1048C71ED1F /* PlateParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E2D812E811229A7B82112 /* PlateParserProtocol.swift */; };
+		26C8CD27E17DF7F30305DB94 /* StateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BA823BA447F8C51A0FFC8 /* StateDetailView.swift */; };
+		2A19B468700DADA61EBFA9C7 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1C553BDE793F34C26F2C7 /* SplashView.swift */; };
+		2A2924FD89C72F44EE721AC8 /* SubmissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B6738809BAEC057F2AB8E0 /* SubmissionService.swift */; };
+		2ABBDF75C8983ACD25420CF2 /* BliptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A180083D474E2A2FE11C3FA /* BliptApp.swift */; };
+		2B9C8A39BFFB96ED2A67A6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE565C509F21A6E9D6D5BA9 /* Assets.xcassets */; };
+		306E4D5D431E7AA71B066CFB /* MoroccanPlateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF138C8F0B0B87B66E01160 /* MoroccanPlateParser.swift */; };
+		310BA365145A36DCD22FB0DA /* RTODataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09DF725050E15FD2E76E0D /* RTODataServiceTests.swift */; };
+		3257DF005B0EFA59142AF14A /* FuzzyMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C42F58C3272ED4EBFC4DC /* FuzzyMatcher.swift */; };
+		360FB9AF3A58A1FE2BE49AD1 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7677C0074F4BF3F32907A94A /* CameraPreviewView.swift */; };
+		36BA11978C67BD1C9F4DEA4D /* MockOCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246846DEC263EEE9C1483264 /* MockOCRService.swift */; };
+		3DD1960095EB49BFAD41B4D0 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215093FED9A2F8750D48F9E5 /* CameraManager.swift */; };
+		3E914D553D2EE6E15FDAD6C7 /* BrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803AF99ECDE30266BDB306B /* BrowseViewModel.swift */; };
+		3F17B190E6B8CEE6468CEB85 /* PlateNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055EED2D6DF6EF42A4167DB4 /* PlateNormalizer.swift */; };
+		418B0DA0AD860310C098B4FE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24543A9221615A89FFBE0F /* Theme.swift */; };
+		425482B403C9A706C3AFBC02 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E258B5C16E68B876D13F7 /* Country.swift */; };
+		496A252E84F0D241D5DCE2AF /* FeatureComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD5AC867FBAD352446B099 /* FeatureComparisonView.swift */; };
+		4CD398CC1E153D813F88E680 /* SubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C64D1D8C805C3A81B8F4F /* SubscriptionViewModel.swift */; };
+		4F9B97E074A720474E4BBB7A /* PlateResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3181CE6F49BBF4FF0E738B4 /* PlateResultView.swift */; };
+		50EA10391555155D9465BC43 /* SubscriptionProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C409A01C9573F264E1E98AA /* SubscriptionProduct.swift */; };
+		53316646290803EFA2569541 /* RTODataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610F920024683C64A300164F /* RTODataService.swift */; };
+		53F23FA9AA6BEA3B008D3018 /* indian_rto_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A9CE0DA2C374A4317754216 /* indian_rto_data.json */; };
+		575E3D4CF61337A48C58F4B1 /* moroccan_cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F0602207796ADCEDDDC8B14 /* moroccan_cities.json */; };
+		57F5569FD8D895EAB2D95884 /* VahanAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91284DF4290DED082CB68042 /* VahanAPIResponse.swift */; };
+		5989AB8FEDFEE02DA84B2D5F /* BliptLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F198F8F662F2AADAAFAA5A7 /* BliptLogoView.swift */; };
+		59C174CB3F1B057C365D5BB4 /* PlateVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE18645DDBC27584C5216B3 /* PlateVisualizerView.swift */; };
+		5A469B99ACD3B9F0D6516A5B /* FitnessCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C06F7BFF495ECB30B14340 /* FitnessCardView.swift */; };
+		5A47A432AECE42B4E4D0AF79 /* VisionOCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CA83660FB6792CFA6CBA /* VisionOCRService.swift */; };
+		5D92370D697EF6309244C3D0 /* IndianState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82A377E761B15AE7185E77 /* IndianState.swift */; };
+		654DB7E1C71D84DB5F00F5EA /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F702956D19ED562953639 /* SubscriptionManager.swift */; };
+		6AE0B2B3E624CF2F135FE5F2 /* ChallanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4B99292025828FE123D64 /* ChallanListView.swift */; };
+		6B84F47B95090F24E2E18176 /* PlateOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6670CF3499FBB604C7823 /* PlateOverlayView.swift */; };
+		6F64ABC877CADFDCB7F3BAB3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5AB3E80D2BFB3912AA695C /* SettingsView.swift */; };
+		72355B84459B0CDAAFFC7554 /* VehicleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94EE644FBA2D2746D5A5D9 /* VehicleInfo.swift */; };
+		730704C47D6F4B9C6218FC18 /* DataSubmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DFE7303EF639CEBDB636CB /* DataSubmissionView.swift */; };
+		76220D6CDE5C1E3153006B80 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA63FCEC68119ADE5321334 /* ScanViewModel.swift */; };
+		79113B56013677D50B88C42F /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4124ADA2ECA1462AD84E51 /* AnalyticsService.swift */; };
+		7971483FB3F299AD1AD5241F /* MoroccanPlateParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C597E93464B526DBC8168 /* MoroccanPlateParserTests.swift */; };
+		7AE68E78A37297A2E7E93CDE /* IndianPlateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57F4C3CF3750A8496E4262 /* IndianPlateParser.swift */; };
+		7E4093E3C6B27879A565A5BD /* OCRServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D360BBC774EEDDEC154C2 /* OCRServiceProtocol.swift */; };
+		84653C8528440A325A07F4E4 /* RTOOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACC25747AA70B8435F647 /* RTOOffice.swift */; };
+		8976F114E6C1115687E23521 /* ScanResultSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D9717AE633A8B0417CD94 /* ScanResultSheet.swift */; };
+		8CEC427D688264DD2008F3B6 /* ScanViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79E8B4B08EFF942261F589 /* ScanViewModelTests.swift */; };
+		8D12368FF9C2AE84220A1B6C /* MoroccanCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2704F6AD0B82D62FB21682 /* MoroccanCity.swift */; };
+		8F1B77EDEA920829AE173381 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3D7FE33D8CBC948623C32 /* ScanView.swift */; };
+		8F8B837A8EF93B1A5C03E118 /* InsuranceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5883CEA456C9688294DCF10E /* InsuranceCardView.swift */; };
+		93369370E0741FF39EAAF1E8 /* IndianPlateParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EA1F54C337E5F2160009F3 /* IndianPlateParserTests.swift */; };
+		98D40A11840CAD4547967517 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310273C2A8ED5056D3BCB82 /* AppConstants.swift */; };
+		9D54FBEF1D76B0FB193DCED0 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92777237A863E624E977763 /* DependencyContainer.swift */; };
+		A326370A9C14CE5032BE2C7A /* CountryDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077EDAAD09E4791C57152EC /* CountryDataServiceProtocol.swift */; };
+		AB6370D5A70B8658EAB4BC7C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB69839004EF62D9034E520 /* APIError.swift */; };
+		AC9F9A7275345F439DA3312B /* DataUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0676F2E83B035C7B6BD6926C /* DataUpdateService.swift */; };
+		B16165581CA60EF4C6BCF92E /* VehicleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF997ABBA18EDBEDEDF8652 /* VehicleDetailViewModel.swift */; };
+		B4B66492B5B7CF44C0311033 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5C7E15E745CA7F16180A7 /* ResultViewModel.swift */; };
+		BFBCCB6F0247F6D28B2EF5F5 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6E47C96DE5711021E831E2 /* LoadingOverlay.swift */; };
+		C987E67B401681858435DFF3 /* PaywallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3036C26BC5E56095CA39EAF /* PaywallManager.swift */; };
+		CFEBE8E5FDAE1B01EECB6601 /* PlateDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E742C282B878B11CC6A53553 /* PlateDetector.swift */; };
+		DF87E18DA14DC785F8D7FEB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F011E99F2D74D97F86369 /* ContentView.swift */; };
+		E82624E10E2D709CDFC27BAC /* MapSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E42B86F14D4BEA121A54337 /* MapSnippetView.swift */; };
+		F65B65586CB931A854E803FB /* FuzzyMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B1F29B4E70B8D1755E8C /* FuzzyMatcherTests.swift */; };
+		FA0167464DA22140E7CE9D37 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AAC1115916F84BF26514A2 /* BrowseView.swift */; };
+		FBE41628AF057E69AFA1F20E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79E122CF5AC510DC0FC1A9E /* APIClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		323D2A3956D275F48A9B9A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD54A11D09836677FEEF6CB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A8DFB51B2DDE475D0933258;
+			remoteInfo = Blipt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		048177084294BF8DF07F7D69 /* VahanAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VahanAPIService.swift; sourceTree = "<group>"; };
+		055EED2D6DF6EF42A4167DB4 /* PlateNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateNormalizer.swift; sourceTree = "<group>"; };
+		0676F2E83B035C7B6BD6926C /* DataUpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUpdateService.swift; sourceTree = "<group>"; };
+		0A94EE644FBA2D2746D5A5D9 /* VehicleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfo.swift; sourceTree = "<group>"; };
+		0D4124ADA2ECA1462AD84E51 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		0E42B86F14D4BEA121A54337 /* MapSnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSnippetView.swift; sourceTree = "<group>"; };
+		0F4D360BBC774EEDDEC154C2 /* OCRServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRServiceProtocol.swift; sourceTree = "<group>"; };
+		131E2D812E811229A7B82112 /* PlateParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateParserProtocol.swift; sourceTree = "<group>"; };
+		1803AF99ECDE30266BDB306B /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
+		18F3D7FE33D8CBC948623C32 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		1C409A01C9573F264E1E98AA /* SubscriptionProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionProduct.swift; sourceTree = "<group>"; };
+		215093FED9A2F8750D48F9E5 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		2158E1290D876B98A25B0D8D /* Blipt.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Blipt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2310273C2A8ED5056D3BCB82 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		246846DEC263EEE9C1483264 /* MockOCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOCRService.swift; sourceTree = "<group>"; };
+		2C105008E7448D61F011277A /* Configuration.storekit */ = {isa = PBXFileReference; path = Configuration.storekit; sourceTree = "<group>"; };
+		2F6E47C96DE5711021E831E2 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		3077EDAAD09E4791C57152EC /* CountryDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataServiceProtocol.swift; sourceTree = "<group>"; };
+		3C2B945617C9139B74215F29 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		3D5AB3E80D2BFB3912AA695C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		45B6738809BAEC057F2AB8E0 /* SubmissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionService.swift; sourceTree = "<group>"; };
+		45DFE7303EF639CEBDB636CB /* DataSubmissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSubmissionView.swift; sourceTree = "<group>"; };
+		47AAC1115916F84BF26514A2 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
+		4A6D9717AE633A8B0417CD94 /* ScanResultSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultSheet.swift; sourceTree = "<group>"; };
+		4B57F4C3CF3750A8496E4262 /* IndianPlateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianPlateParser.swift; sourceTree = "<group>"; };
+		5883CEA456C9688294DCF10E /* InsuranceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceCardView.swift; sourceTree = "<group>"; };
+		5CE565C509F21A6E9D6D5BA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DF138C8F0B0B87B66E01160 /* MoroccanPlateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoroccanPlateParser.swift; sourceTree = "<group>"; };
+		5E3114CC41536B581643E64C /* MoroccoDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoroccoDataService.swift; sourceTree = "<group>"; };
+		610F920024683C64A300164F /* RTODataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTODataService.swift; sourceTree = "<group>"; };
+		63F1C553BDE793F34C26F2C7 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		643143D5548F71E92828AF06 /* LicensePlate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensePlate.swift; sourceTree = "<group>"; };
+		6926A5284B8BF58D8DC7CEC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6BB9B1F29B4E70B8D1755E8C /* FuzzyMatcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyMatcherTests.swift; sourceTree = "<group>"; };
+		6D24543A9221615A89FFBE0F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		6FFD888CA8645DCE87A37C67 /* ConnectivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityMonitor.swift; sourceTree = "<group>"; };
+		7677C0074F4BF3F32907A94A /* CameraPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		7D271D501A4F658FC7BFF179 /* Blipt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blipt.entitlements; sourceTree = "<group>"; };
+		7D50C64F875721B25B0B7435 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		808C64D1D8C805C3A81B8F4F /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
+		8A180083D474E2A2FE11C3FA /* BliptApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BliptApp.swift; sourceTree = "<group>"; };
+		8A9CE0DA2C374A4317754216 /* indian_rto_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = indian_rto_data.json; sourceTree = "<group>"; };
+		8CB69839004EF62D9034E520 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		8D79E8B4B08EFF942261F589 /* ScanViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModelTests.swift; sourceTree = "<group>"; };
+		8F0602207796ADCEDDDC8B14 /* moroccan_cities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = moroccan_cities.json; sourceTree = "<group>"; };
+		8F198F8F662F2AADAAFAA5A7 /* BliptLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BliptLogoView.swift; sourceTree = "<group>"; };
+		91284DF4290DED082CB68042 /* VahanAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VahanAPIResponse.swift; sourceTree = "<group>"; };
+		9C3F011E99F2D74D97F86369 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9E82A377E761B15AE7185E77 /* IndianState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianState.swift; sourceTree = "<group>"; };
+		9EC5C7E15E745CA7F16180A7 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		9FC9DBC331617ABF93BCC0BB /* RTORowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORowView.swift; sourceTree = "<group>"; };
+		A14C597E93464B526DBC8168 /* MoroccanPlateParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoroccanPlateParserTests.swift; sourceTree = "<group>"; };
+		A530CA83660FB6792CFA6CBA /* VisionOCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOCRService.swift; sourceTree = "<group>"; };
+		ABF997ABBA18EDBEDEDF8652 /* VehicleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModel.swift; sourceTree = "<group>"; };
+		ACAD5AC867FBAD352446B099 /* FeatureComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureComparisonView.swift; sourceTree = "<group>"; };
+		ACD6670CF3499FBB604C7823 /* PlateOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateOverlayView.swift; sourceTree = "<group>"; };
+		ADA63FCEC68119ADE5321334 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
+		B3036C26BC5E56095CA39EAF /* PaywallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallManager.swift; sourceTree = "<group>"; };
+		B605E1F47FB919EC51E03FF6 /* VehicleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailView.swift; sourceTree = "<group>"; };
+		B73E258B5C16E68B876D13F7 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		B92777237A863E624E977763 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		C65F702956D19ED562953639 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		C79E122CF5AC510DC0FC1A9E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C8C06F7BFF495ECB30B14340 /* FitnessCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessCardView.swift; sourceTree = "<group>"; };
+		CA09DF725050E15FD2E76E0D /* RTODataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTODataServiceTests.swift; sourceTree = "<group>"; };
+		CE7BA823BA447F8C51A0FFC8 /* StateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailView.swift; sourceTree = "<group>"; };
+		CFD487369ABDE1D823875E29 /* ErrorBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBannerView.swift; sourceTree = "<group>"; };
+		D6BACC25747AA70B8435F647 /* RTOOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTOOffice.swift; sourceTree = "<group>"; };
+		E3181CE6F49BBF4FF0E738B4 /* PlateResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateResultView.swift; sourceTree = "<group>"; };
+		E742C282B878B11CC6A53553 /* PlateDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateDetector.swift; sourceTree = "<group>"; };
+		EB7C42F58C3272ED4EBFC4DC /* FuzzyMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyMatcher.swift; sourceTree = "<group>"; };
+		EDE18645DDBC27584C5216B3 /* PlateVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateVisualizerView.swift; sourceTree = "<group>"; };
+		EE26DA2896ED8750F02CDB27 /* BliptTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BliptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2704F6AD0B82D62FB21682 /* MoroccanCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoroccanCity.swift; sourceTree = "<group>"; };
+		EFC4B99292025828FE123D64 /* ChallanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallanListView.swift; sourceTree = "<group>"; };
+		F3EA1F54C337E5F2160009F3 /* IndianPlateParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianPlateParserTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		041AAA94F31D02200674A6C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2158E1290D876B98A25B0D8D /* Blipt.app */,
+				EE26DA2896ED8750F02CDB27 /* BliptTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D9670CAF8BEC5EFC9A40B7B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44DE22AB059A120E6BDA4754 /* API */,
+				9C14E74F785C693C8DC43103 /* Domain */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F54C925549F374A8E40770A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9E885F1DA0B1F21286AAE0C /* Data */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		30E8D69FABF41FEBD2EDBCD5 /* Blipt */ = {
+			isa = PBXGroup;
+			children = (
+				5CE565C509F21A6E9D6D5BA9 /* Assets.xcassets */,
+				7D271D501A4F658FC7BFF179 /* Blipt.entitlements */,
+				8A180083D474E2A2FE11C3FA /* BliptApp.swift */,
+				9C3F011E99F2D74D97F86369 /* ContentView.swift */,
+				6926A5284B8BF58D8DC7CEC4 /* Info.plist */,
+				40F93D2EEB0D5F206D9825E8 /* App */,
+				1D9670CAF8BEC5EFC9A40B7B /* Models */,
+				2F54C925549F374A8E40770A /* Resources */,
+				8697B433ED31B58714444E8D /* Services */,
+				3BD9BAC82D4EB3E41824BCE7 /* ViewModels */,
+				D5E3E1C956E3BEDFDA28692B /* Views */,
+			);
+			path = Blipt;
+			sourceTree = "<group>";
+		};
+		35B515867E11178DFCD933BA /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				215093FED9A2F8750D48F9E5 /* CameraManager.swift */,
+				E742C282B878B11CC6A53553 /* PlateDetector.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		3BD9BAC82D4EB3E41824BCE7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1803AF99ECDE30266BDB306B /* BrowseViewModel.swift */,
+				9EC5C7E15E745CA7F16180A7 /* ResultViewModel.swift */,
+				ADA63FCEC68119ADE5321334 /* ScanViewModel.swift */,
+				808C64D1D8C805C3A81B8F4F /* SubscriptionViewModel.swift */,
+				ABF997ABBA18EDBEDEDF8652 /* VehicleDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3FA8073A8C5C8DA15A704A5A = {
+			isa = PBXGroup;
+			children = (
+				2C105008E7448D61F011277A /* Configuration.storekit */,
+				30E8D69FABF41FEBD2EDBCD5 /* Blipt */,
+				C262391FBBAB4064796B0766 /* Tests */,
+				041AAA94F31D02200674A6C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40F93D2EEB0D5F206D9825E8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2310273C2A8ED5056D3BCB82 /* AppConstants.swift */,
+				3C2B945617C9139B74215F29 /* AppState.swift */,
+				B92777237A863E624E977763 /* DependencyContainer.swift */,
+				6D24543A9221615A89FFBE0F /* Theme.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4213B9845EA4F1408A9C9590 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				0D4124ADA2ECA1462AD84E51 /* AnalyticsService.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		44DE22AB059A120E6BDA4754 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8CB69839004EF62D9034E520 /* APIError.swift */,
+				1C409A01C9573F264E1E98AA /* SubscriptionProduct.swift */,
+				91284DF4290DED082CB68042 /* VahanAPIResponse.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		514DF73CB9F62D2E78F0574A /* PlateParser */ = {
+			isa = PBXGroup;
+			children = (
+				EB7C42F58C3272ED4EBFC4DC /* FuzzyMatcher.swift */,
+				4B57F4C3CF3750A8496E4262 /* IndianPlateParser.swift */,
+				5DF138C8F0B0B87B66E01160 /* MoroccanPlateParser.swift */,
+				055EED2D6DF6EF42A4167DB4 /* PlateNormalizer.swift */,
+				131E2D812E811229A7B82112 /* PlateParserProtocol.swift */,
+			);
+			path = PlateParser;
+			sourceTree = "<group>";
+		};
+		64148A7FD1B954FA429C7EA8 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				B3036C26BC5E56095CA39EAF /* PaywallManager.swift */,
+				C65F702956D19ED562953639 /* SubscriptionManager.swift */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
+		659B9094E634CC376FAA6901 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				7677C0074F4BF3F32907A94A /* CameraPreviewView.swift */,
+				ACD6670CF3499FBB604C7823 /* PlateOverlayView.swift */,
+				4A6D9717AE633A8B0417CD94 /* ScanResultSheet.swift */,
+				18F3D7FE33D8CBC948623C32 /* ScanView.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		7F882C174FCC51B10B9068DF /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				ACAD5AC867FBAD352446B099 /* FeatureComparisonView.swift */,
+				7D50C64F875721B25B0B7435 /* PaywallView.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		8697B433ED31B58714444E8D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4213B9845EA4F1408A9C9590 /* Analytics */,
+				35B515867E11178DFCD933BA /* Camera */,
+				98866C00A7F14246BB28C711 /* Data */,
+				9939B982D6962E8A5DF6D8A6 /* Network */,
+				9CE5E679925128A01032D9B6 /* OCR */,
+				514DF73CB9F62D2E78F0574A /* PlateParser */,
+				64148A7FD1B954FA429C7EA8 /* Subscription */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		90926709CA88E3B62FC61975 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8F198F8F662F2AADAAFAA5A7 /* BliptLogoView.swift */,
+				CFD487369ABDE1D823875E29 /* ErrorBannerView.swift */,
+				2F6E47C96DE5711021E831E2 /* LoadingOverlay.swift */,
+				0E42B86F14D4BEA121A54337 /* MapSnippetView.swift */,
+				EDE18645DDBC27584C5216B3 /* PlateVisualizerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		98866C00A7F14246BB28C711 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3077EDAAD09E4791C57152EC /* CountryDataServiceProtocol.swift */,
+				5E3114CC41536B581643E64C /* MoroccoDataService.swift */,
+				610F920024683C64A300164F /* RTODataService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9939B982D6962E8A5DF6D8A6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C79E122CF5AC510DC0FC1A9E /* APIClient.swift */,
+				6FFD888CA8645DCE87A37C67 /* ConnectivityMonitor.swift */,
+				0676F2E83B035C7B6BD6926C /* DataUpdateService.swift */,
+				45B6738809BAEC057F2AB8E0 /* SubmissionService.swift */,
+				048177084294BF8DF07F7D69 /* VahanAPIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9C14E74F785C693C8DC43103 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B73E258B5C16E68B876D13F7 /* Country.swift */,
+				9E82A377E761B15AE7185E77 /* IndianState.swift */,
+				643143D5548F71E92828AF06 /* LicensePlate.swift */,
+				EF2704F6AD0B82D62FB21682 /* MoroccanCity.swift */,
+				D6BACC25747AA70B8435F647 /* RTOOffice.swift */,
+				0A94EE644FBA2D2746D5A5D9 /* VehicleInfo.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		9CE5E679925128A01032D9B6 /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				246846DEC263EEE9C1483264 /* MockOCRService.swift */,
+				0F4D360BBC774EEDDEC154C2 /* OCRServiceProtocol.swift */,
+				A530CA83660FB6792CFA6CBA /* VisionOCRService.swift */,
+			);
+			path = OCR;
+			sourceTree = "<group>";
+		};
+		C262391FBBAB4064796B0766 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6BB9B1F29B4E70B8D1755E8C /* FuzzyMatcherTests.swift */,
+				F3EA1F54C337E5F2160009F3 /* IndianPlateParserTests.swift */,
+				A14C597E93464B526DBC8168 /* MoroccanPlateParserTests.swift */,
+				CA09DF725050E15FD2E76E0D /* RTODataServiceTests.swift */,
+				8D79E8B4B08EFF942261F589 /* ScanViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D5E3E1C956E3BEDFDA28692B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63F1C553BDE793F34C26F2C7 /* SplashView.swift */,
+				E6FC17C55F9CA30F53686CFB /* Browse */,
+				90926709CA88E3B62FC61975 /* Components */,
+				7F882C174FCC51B10B9068DF /* Paywall */,
+				E0B8703B4A1726AE5049B9B6 /* Result */,
+				659B9094E634CC376FAA6901 /* Scan */,
+				D68E124FE1CADBFA62691085 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D68E124FE1CADBFA62691085 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				45DFE7303EF639CEBDB636CB /* DataSubmissionView.swift */,
+				3D5AB3E80D2BFB3912AA695C /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D9E885F1DA0B1F21286AAE0C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8A9CE0DA2C374A4317754216 /* indian_rto_data.json */,
+				8F0602207796ADCEDDDC8B14 /* moroccan_cities.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E0B8703B4A1726AE5049B9B6 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				EFC4B99292025828FE123D64 /* ChallanListView.swift */,
+				C8C06F7BFF495ECB30B14340 /* FitnessCardView.swift */,
+				5883CEA456C9688294DCF10E /* InsuranceCardView.swift */,
+				E3181CE6F49BBF4FF0E738B4 /* PlateResultView.swift */,
+				B605E1F47FB919EC51E03FF6 /* VehicleDetailView.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		E6FC17C55F9CA30F53686CFB /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				47AAC1115916F84BF26514A2 /* BrowseView.swift */,
+				9FC9DBC331617ABF93BCC0BB /* RTORowView.swift */,
+				CE7BA823BA447F8C51A0FFC8 /* StateDetailView.swift */,
+			);
+			path = Browse;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A8DFB51B2DDE475D0933258 /* Blipt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 665F7FA628CF5667B6FAC4EC /* Build configuration list for PBXNativeTarget "Blipt" */;
+			buildPhases = (
+				BB527190BADC844CA9233360 /* Sources */,
+				D439C9E2ABDEDAC887D884E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blipt;
+			packageProductDependencies = (
+			);
+			productName = Blipt;
+			productReference = 2158E1290D876B98A25B0D8D /* Blipt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6DB98E4AFC47352BF63255F /* BliptTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCFBD8A3AEAB6E63F54DA26A /* Build configuration list for PBXNativeTarget "BliptTests" */;
+			buildPhases = (
+				10B7D389CA3B6ADD6EC64DBA /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EE0EAD8B386FB2CB04A989B /* PBXTargetDependency */,
+			);
+			name = BliptTests;
+			packageProductDependencies = (
+			);
+			productName = BliptTests;
+			productReference = EE26DA2896ED8750F02CDB27 /* BliptTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD54A11D09836677FEEF6CB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					1A8DFB51B2DDE475D0933258 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D7592082790735C3130CB135 /* Build configuration list for PBXProject "Blipt" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3FA8073A8C5C8DA15A704A5A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 041AAA94F31D02200674A6C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A8DFB51B2DDE475D0933258 /* Blipt */,
+				F6DB98E4AFC47352BF63255F /* BliptTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D439C9E2ABDEDAC887D884E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B9C8A39BFFB96ED2A67A6F1 /* Assets.xcassets in Resources */,
+				53F23FA9AA6BEA3B008D3018 /* indian_rto_data.json in Resources */,
+				575E3D4CF61337A48C58F4B1 /* moroccan_cities.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10B7D389CA3B6ADD6EC64DBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F65B65586CB931A854E803FB /* FuzzyMatcherTests.swift in Sources */,
+				93369370E0741FF39EAAF1E8 /* IndianPlateParserTests.swift in Sources */,
+				7971483FB3F299AD1AD5241F /* MoroccanPlateParserTests.swift in Sources */,
+				310BA365145A36DCD22FB0DA /* RTODataServiceTests.swift in Sources */,
+				8CEC427D688264DD2008F3B6 /* ScanViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB527190BADC844CA9233360 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE41628AF057E69AFA1F20E /* APIClient.swift in Sources */,
+				AB6370D5A70B8658EAB4BC7C /* APIError.swift in Sources */,
+				79113B56013677D50B88C42F /* AnalyticsService.swift in Sources */,
+				98D40A11840CAD4547967517 /* AppConstants.swift in Sources */,
+				0C315AD1424A7DFC80A6E163 /* AppState.swift in Sources */,
+				2ABBDF75C8983ACD25420CF2 /* BliptApp.swift in Sources */,
+				5989AB8FEDFEE02DA84B2D5F /* BliptLogoView.swift in Sources */,
+				FA0167464DA22140E7CE9D37 /* BrowseView.swift in Sources */,
+				3E914D553D2EE6E15FDAD6C7 /* BrowseViewModel.swift in Sources */,
+				3DD1960095EB49BFAD41B4D0 /* CameraManager.swift in Sources */,
+				360FB9AF3A58A1FE2BE49AD1 /* CameraPreviewView.swift in Sources */,
+				6AE0B2B3E624CF2F135FE5F2 /* ChallanListView.swift in Sources */,
+				219A9A1056CBDF4F6CF5FDFB /* ConnectivityMonitor.swift in Sources */,
+				DF87E18DA14DC785F8D7FEB3 /* ContentView.swift in Sources */,
+				425482B403C9A706C3AFBC02 /* Country.swift in Sources */,
+				A326370A9C14CE5032BE2C7A /* CountryDataServiceProtocol.swift in Sources */,
+				730704C47D6F4B9C6218FC18 /* DataSubmissionView.swift in Sources */,
+				AC9F9A7275345F439DA3312B /* DataUpdateService.swift in Sources */,
+				9D54FBEF1D76B0FB193DCED0 /* DependencyContainer.swift in Sources */,
+				1206A7DF903EA358298085D2 /* ErrorBannerView.swift in Sources */,
+				496A252E84F0D241D5DCE2AF /* FeatureComparisonView.swift in Sources */,
+				5A469B99ACD3B9F0D6516A5B /* FitnessCardView.swift in Sources */,
+				3257DF005B0EFA59142AF14A /* FuzzyMatcher.swift in Sources */,
+				7AE68E78A37297A2E7E93CDE /* IndianPlateParser.swift in Sources */,
+				5D92370D697EF6309244C3D0 /* IndianState.swift in Sources */,
+				8F8B837A8EF93B1A5C03E118 /* InsuranceCardView.swift in Sources */,
+				1714871B97BE8E2E6C1F4DC2 /* LicensePlate.swift in Sources */,
+				BFBCCB6F0247F6D28B2EF5F5 /* LoadingOverlay.swift in Sources */,
+				E82624E10E2D709CDFC27BAC /* MapSnippetView.swift in Sources */,
+				36BA11978C67BD1C9F4DEA4D /* MockOCRService.swift in Sources */,
+				8D12368FF9C2AE84220A1B6C /* MoroccanCity.swift in Sources */,
+				306E4D5D431E7AA71B066CFB /* MoroccanPlateParser.swift in Sources */,
+				06B2EF97E14E657AC5674A4E /* MoroccoDataService.swift in Sources */,
+				7E4093E3C6B27879A565A5BD /* OCRServiceProtocol.swift in Sources */,
+				C987E67B401681858435DFF3 /* PaywallManager.swift in Sources */,
+				22F0967F2A593639CC1EDFFD /* PaywallView.swift in Sources */,
+				CFEBE8E5FDAE1B01EECB6601 /* PlateDetector.swift in Sources */,
+				3F17B190E6B8CEE6468CEB85 /* PlateNormalizer.swift in Sources */,
+				6B84F47B95090F24E2E18176 /* PlateOverlayView.swift in Sources */,
+				2530AE2644AFD1048C71ED1F /* PlateParserProtocol.swift in Sources */,
+				4F9B97E074A720474E4BBB7A /* PlateResultView.swift in Sources */,
+				59C174CB3F1B057C365D5BB4 /* PlateVisualizerView.swift in Sources */,
+				53316646290803EFA2569541 /* RTODataService.swift in Sources */,
+				84653C8528440A325A07F4E4 /* RTOOffice.swift in Sources */,
+				1159F3A79D8F9FE9E05EFCFE /* RTORowView.swift in Sources */,
+				B4B66492B5B7CF44C0311033 /* ResultViewModel.swift in Sources */,
+				8976F114E6C1115687E23521 /* ScanResultSheet.swift in Sources */,
+				8F1B77EDEA920829AE173381 /* ScanView.swift in Sources */,
+				76220D6CDE5C1E3153006B80 /* ScanViewModel.swift in Sources */,
+				6F64ABC877CADFDCB7F3BAB3 /* SettingsView.swift in Sources */,
+				2A19B468700DADA61EBFA9C7 /* SplashView.swift in Sources */,
+				26C8CD27E17DF7F30305DB94 /* StateDetailView.swift in Sources */,
+				2A2924FD89C72F44EE721AC8 /* SubmissionService.swift in Sources */,
+				654DB7E1C71D84DB5F00F5EA /* SubscriptionManager.swift in Sources */,
+				50EA10391555155D9465BC43 /* SubscriptionProduct.swift in Sources */,
+				4CD398CC1E153D813F88E680 /* SubscriptionViewModel.swift in Sources */,
+				418B0DA0AD860310C098B4FE /* Theme.swift in Sources */,
+				57F5569FD8D895EAB2D95884 /* VahanAPIResponse.swift in Sources */,
+				00B4C950DB07EEE3DA6E2FDE /* VahanAPIService.swift in Sources */,
+				21BA4CA02275E792AFB2029C /* VehicleDetailView.swift in Sources */,
+				B16165581CA60EF4C6BCF92E /* VehicleDetailViewModel.swift in Sources */,
+				72355B84459B0CDAAFFC7554 /* VehicleInfo.swift in Sources */,
+				5A47A432AECE42B4E4D0AF79 /* VisionOCRService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EE0EAD8B386FB2CB04A989B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A8DFB51B2DDE475D0933258 /* Blipt */;
+			targetProxy = 323D2A3956D275F48A9B9A0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B0B53F33CAF3237DC55D265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		4200D0ADC9526B89241037AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.blipt.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blipt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Blipt";
+			};
+			name = Debug;
+		};
+		4A473B219A6A8CBBFCB7512A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.blipt.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blipt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Blipt";
+			};
+			name = Release;
+		};
+		A1420142F66421A8B2008998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		C41D45F1D6A321F889B29BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Blipt/Blipt.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Blipt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				NSCameraUsageDescription = "Blipt needs camera access to scan license plates.";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blipt.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F07CAA941792EE9E2AD0E4F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Blipt/Blipt.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Blipt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				NSCameraUsageDescription = "Blipt needs camera access to scan license plates.";
+				PRODUCT_BUNDLE_IDENTIFIER = com.blipt.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		665F7FA628CF5667B6FAC4EC /* Build configuration list for PBXNativeTarget "Blipt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C41D45F1D6A321F889B29BF7 /* Debug */,
+				F07CAA941792EE9E2AD0E4F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D7592082790735C3130CB135 /* Build configuration list for PBXProject "Blipt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B0B53F33CAF3237DC55D265 /* Debug */,
+				A1420142F66421A8B2008998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FCFBD8A3AEAB6E63F54DA26A /* Build configuration list for PBXNativeTarget "BliptTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4200D0ADC9526B89241037AB /* Debug */,
+				4A473B219A6A8CBBFCB7512A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD54A11D09836677FEEF6CB8 /* Project object */;
+}
