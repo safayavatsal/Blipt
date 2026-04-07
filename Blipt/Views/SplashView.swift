@@ -2,18 +2,17 @@ import SwiftUI
 
 struct SplashView: View {
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
-    @State private var isActive = false
-    @State private var showOnboarding = false
+    @State private var isSplashDone = false
     @State private var logoScale: CGFloat = 0.6
     @State private var logoOpacity: Double = 0
     @State private var textOpacity: Double = 0
 
     var body: some View {
-        if isActive {
-            if showOnboarding {
-                OnboardingView()
-            } else {
+        if isSplashDone {
+            if hasCompletedOnboarding {
                 ContentView()
+            } else {
+                OnboardingView()
             }
         } else {
             ZStack {
@@ -64,8 +63,7 @@ struct SplashView: View {
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     withAnimation(.easeInOut(duration: 0.4)) {
-                        showOnboarding = !hasCompletedOnboarding
-                        isActive = true
+                        isSplashDone = true
                     }
                 }
             }
