@@ -21,6 +21,20 @@
                ReferencedContainer = "container:Blipt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "459B77CA2EEEC4F80D79E7AF"
+               BuildableName = "BliptWidget.appex"
+               BlueprintName = "BliptWidget"
+               ReferencedContainer = "container:Blipt.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

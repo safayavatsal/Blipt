@@ -23,6 +23,7 @@
 		2A2924FD89C72F44EE721AC8 /* SubmissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B6738809BAEC057F2AB8E0 /* SubmissionService.swift */; };
 		2ABBDF75C8983ACD25420CF2 /* BliptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A180083D474E2A2FE11C3FA /* BliptApp.swift */; };
 		2B9C8A39BFFB96ED2A67A6F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE565C509F21A6E9D6D5BA9 /* Assets.xcassets */; };
+		2F46D4326F9F5ADA79E1DC3D /* ScanPlateIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E909ACD2A419242806ED9E /* ScanPlateIntent.swift */; };
 		306E4D5D431E7AA71B066CFB /* MoroccanPlateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF138C8F0B0B87B66E01160 /* MoroccanPlateParser.swift */; };
 		310BA365145A36DCD22FB0DA /* RTODataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09DF725050E15FD2E76E0D /* RTODataServiceTests.swift */; };
 		3257DF005B0EFA59142AF14A /* FuzzyMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C42F58C3272ED4EBFC4DC /* FuzzyMatcher.swift */; };
@@ -52,6 +53,7 @@
 		654DB7E1C71D84DB5F00F5EA /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F702956D19ED562953639 /* SubscriptionManager.swift */; };
 		6AE0B2B3E624CF2F135FE5F2 /* ChallanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4B99292025828FE123D64 /* ChallanListView.swift */; };
 		6B84F47B95090F24E2E18176 /* PlateOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6670CF3499FBB604C7823 /* PlateOverlayView.swift */; };
+		6C7B4767CC8FD049F9DE9D4F /* CarPlaySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6FA663004E0BCF7EC02707 /* CarPlaySceneDelegate.swift */; };
 		6F64ABC877CADFDCB7F3BAB3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5AB3E80D2BFB3912AA695C /* SettingsView.swift */; };
 		72355B84459B0CDAAFFC7554 /* VehicleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94EE644FBA2D2746D5A5D9 /* VehicleInfo.swift */; };
 		72FF396D79D0A85C8CDDD5B3 /* RTODetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A1B0E37561D864CF570075 /* RTODetailView.swift */; };
@@ -64,6 +66,7 @@
 		7D0ADCEAA43353792651AC76 /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6457BA7F8F435172C36EB643 /* CompareView.swift */; };
 		7E4093E3C6B27879A565A5BD /* OCRServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D360BBC774EEDDEC154C2 /* OCRServiceProtocol.swift */; };
 		84653C8528440A325A07F4E4 /* RTOOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACC25747AA70B8435F647 /* RTOOffice.swift */; };
+		868C4F1BB40F7A41DF6B5C95 /* WidgetDataBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887584D7A3991902FBD369A1 /* WidgetDataBridge.swift */; };
 		895BEB918F90489254933DC1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57841C313A3C0814CC6E2F /* NotificationManager.swift */; };
 		8976F114E6C1115687E23521 /* ScanResultSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D9717AE633A8B0417CD94 /* ScanResultSheet.swift */; };
 		8CEC427D688264DD2008F3B6 /* ScanViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79E8B4B08EFF942261F589 /* ScanViewModelTests.swift */; };
@@ -86,6 +89,7 @@
 		BFBCCB6F0247F6D28B2EF5F5 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6E47C96DE5711021E831E2 /* LoadingOverlay.swift */; };
 		C987E67B401681858435DFF3 /* PaywallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3036C26BC5E56095CA39EAF /* PaywallManager.swift */; };
 		C9970405B803394FD9C655F5 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B7558AEB226436EC798BA /* HistoryViewModel.swift */; };
+		CAAAB4A285329ECEA753680C /* BliptWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80FA1CD3DAF18B0DD896DD5 /* BliptWidget.swift */; };
 		CFEBE8E5FDAE1B01EECB6601 /* PlateDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E742C282B878B11CC6A53553 /* PlateDetector.swift */; };
 		DC21A5AA1336AF629ED3C7E6 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC4AAC064E00B95A64B61E8 /* ShareCardView.swift */; };
 		DD0957DF45862680A7F57231 /* FleetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7BEE9746ECC2085E2380 /* FleetService.swift */; };
@@ -96,6 +100,7 @@
 		F65B65586CB931A854E803FB /* FuzzyMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9B1F29B4E70B8D1755E8C /* FuzzyMatcherTests.swift */; };
 		FA0167464DA22140E7CE9D37 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AAC1115916F84BF26514A2 /* BrowseView.swift */; };
 		FBE41628AF057E69AFA1F20E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79E122CF5AC510DC0FC1A9E /* APIClient.swift */; };
+		FC5496FDF61A966F6E0DCD0D /* BliptWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 118065DE430DE3833F1170B5 /* BliptWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,17 +111,40 @@
 			remoteGlobalIDString = 1A8DFB51B2DDE475D0933258;
 			remoteInfo = Blipt;
 		};
+		B0DFA81E5864F46DEB44F39D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD54A11D09836677FEEF6CB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 459B77CA2EEEC4F80D79E7AF;
+			remoteInfo = BliptWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5FDD42949484C7DF1D151A6 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FC5496FDF61A966F6E0DCD0D /* BliptWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		048177084294BF8DF07F7D69 /* VahanAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VahanAPIService.swift; sourceTree = "<group>"; };
 		055EED2D6DF6EF42A4167DB4 /* PlateNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateNormalizer.swift; sourceTree = "<group>"; };
 		0676F2E83B035C7B6BD6926C /* DataUpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUpdateService.swift; sourceTree = "<group>"; };
+		07E909ACD2A419242806ED9E /* ScanPlateIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPlateIntent.swift; sourceTree = "<group>"; };
 		0A94EE644FBA2D2746D5A5D9 /* VehicleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfo.swift; sourceTree = "<group>"; };
 		0D4124ADA2ECA1462AD84E51 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		0E42B86F14D4BEA121A54337 /* MapSnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSnippetView.swift; sourceTree = "<group>"; };
 		0F4D360BBC774EEDDEC154C2 /* OCRServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRServiceProtocol.swift; sourceTree = "<group>"; };
 		107607D7E943346C5DBBF337 /* PlatePhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatePhotoStore.swift; sourceTree = "<group>"; };
+		118065DE430DE3833F1170B5 /* BliptWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = BliptWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		131E2D812E811229A7B82112 /* PlateParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateParserProtocol.swift; sourceTree = "<group>"; };
 		1803AF99ECDE30266BDB306B /* BrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewModel.swift; sourceTree = "<group>"; };
 		18F3D7FE33D8CBC948623C32 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
@@ -158,7 +186,9 @@
 		7D271D501A4F658FC7BFF179 /* Blipt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blipt.entitlements; sourceTree = "<group>"; };
 		7D50C64F875721B25B0B7435 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		808C64D1D8C805C3A81B8F4F /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
+		887584D7A3991902FBD369A1 /* WidgetDataBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataBridge.swift; sourceTree = "<group>"; };
 		8A180083D474E2A2FE11C3FA /* BliptApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BliptApp.swift; sourceTree = "<group>"; };
+		8A6FA663004E0BCF7EC02707 /* CarPlaySceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlaySceneDelegate.swift; sourceTree = "<group>"; };
 		8A9CE0DA2C374A4317754216 /* indian_rto_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = indian_rto_data.json; sourceTree = "<group>"; };
 		8CB69839004EF62D9034E520 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		8D79E8B4B08EFF942261F589 /* ScanViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModelTests.swift; sourceTree = "<group>"; };
@@ -190,6 +220,7 @@
 		CE7BA823BA447F8C51A0FFC8 /* StateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDetailView.swift; sourceTree = "<group>"; };
 		CFD487369ABDE1D823875E29 /* ErrorBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBannerView.swift; sourceTree = "<group>"; };
 		D6BACC25747AA70B8435F647 /* RTOOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTOOffice.swift; sourceTree = "<group>"; };
+		D80FA1CD3DAF18B0DD896DD5 /* BliptWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BliptWidget.swift; sourceTree = "<group>"; };
 		D8980D5E76559A6E1E135275 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		DA57841C313A3C0814CC6E2F /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		E3181CE6F49BBF4FF0E738B4 /* PlateResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateResultView.swift; sourceTree = "<group>"; };
@@ -201,6 +232,7 @@
 		EE26DA2896ED8750F02CDB27 /* BliptTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BliptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2704F6AD0B82D62FB21682 /* MoroccanCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoroccanCity.swift; sourceTree = "<group>"; };
 		EFC4B99292025828FE123D64 /* ChallanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallanListView.swift; sourceTree = "<group>"; };
+		F01EC6C39893449520E078FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F3EA1F54C337E5F2160009F3 /* IndianPlateParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianPlateParserTests.swift; sourceTree = "<group>"; };
 		FBAC7BEE9746ECC2085E2380 /* FleetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +243,7 @@
 			children = (
 				2158E1290D876B98A25B0D8D /* Blipt.app */,
 				EE26DA2896ED8750F02CDB27 /* BliptTests.xctest */,
+				118065DE430DE3833F1170B5 /* BliptWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +255,15 @@
 				9C14E74F785C693C8DC43103 /* Domain */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		214BFEAB81992D263B8ABB5D /* BliptWidget */ = {
+			isa = PBXGroup;
+			children = (
+				D80FA1CD3DAF18B0DD896DD5 /* BliptWidget.swift */,
+				F01EC6C39893449520E078FB /* Info.plist */,
+			);
+			path = BliptWidget;
 			sourceTree = "<group>";
 		};
 		2F54C925549F374A8E40770A /* Resources */ = {
@@ -249,6 +291,7 @@
 				9C3F011E99F2D74D97F86369 /* ContentView.swift */,
 				6926A5284B8BF58D8DC7CEC4 /* Info.plist */,
 				40F93D2EEB0D5F206D9825E8 /* App */,
+				945B3B668C254656137BC753 /* AppIntents */,
 				1D9670CAF8BEC5EFC9A40B7B /* Models */,
 				2F54C925549F374A8E40770A /* Resources */,
 				8697B433ED31B58714444E8D /* Services */,
@@ -286,6 +329,7 @@
 			children = (
 				2C105008E7448D61F011277A /* Configuration.storekit */,
 				30E8D69FABF41FEBD2EDBCD5 /* Blipt */,
+				214BFEAB81992D263B8ABB5D /* BliptWidget */,
 				C262391FBBAB4064796B0766 /* Tests */,
 				041AAA94F31D02200674A6C6 /* Products */,
 			);
@@ -377,8 +421,10 @@
 			children = (
 				DA57841C313A3C0814CC6E2F /* NotificationManager.swift */,
 				107607D7E943346C5DBBF337 /* PlatePhotoStore.swift */,
+				887584D7A3991902FBD369A1 /* WidgetDataBridge.swift */,
 				4213B9845EA4F1408A9C9590 /* Analytics */,
 				35B515867E11178DFCD933BA /* Camera */,
+				ADDB6036C7E52FB5C74DD27C /* CarPlay */,
 				98866C00A7F14246BB28C711 /* Data */,
 				9939B982D6962E8A5DF6D8A6 /* Network */,
 				9CE5E679925128A01032D9B6 /* OCR */,
@@ -408,6 +454,14 @@
 				A6F345A286EAD4933E2286CB /* VerificationBadgeView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		945B3B668C254656137BC753 /* AppIntents */ = {
+			isa = PBXGroup;
+			children = (
+				07E909ACD2A419242806ED9E /* ScanPlateIntent.swift */,
+			);
+			path = AppIntents;
 			sourceTree = "<group>";
 		};
 		98866C00A7F14246BB28C711 /* Data */ = {
@@ -464,6 +518,14 @@
 				6457BA7F8F435172C36EB643 /* CompareView.swift */,
 			);
 			path = Compare;
+			sourceTree = "<group>";
+		};
+		ADDB6036C7E52FB5C74DD27C /* CarPlay */ = {
+			isa = PBXGroup;
+			children = (
+				8A6FA663004E0BCF7EC02707 /* CarPlaySceneDelegate.swift */,
+			);
+			path = CarPlay;
 			sourceTree = "<group>";
 		};
 		C262391FBBAB4064796B0766 /* Tests */ = {
@@ -547,10 +609,12 @@
 			buildPhases = (
 				BB527190BADC844CA9233360 /* Sources */,
 				D439C9E2ABDEDAC887D884E5 /* Resources */,
+				B5FDD42949484C7DF1D151A6 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B63C1E66CBCCA603269E8550 /* PBXTargetDependency */,
 			);
 			name = Blipt;
 			packageProductDependencies = (
@@ -558,6 +622,23 @@
 			productName = Blipt;
 			productReference = 2158E1290D876B98A25B0D8D /* Blipt.app */;
 			productType = "com.apple.product-type.application";
+		};
+		459B77CA2EEEC4F80D79E7AF /* BliptWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEAE0EDAACC9A63B9B425CC5 /* Build configuration list for PBXNativeTarget "BliptWidget" */;
+			buildPhases = (
+				808557072DA94C5C7830E908 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BliptWidget;
+			packageProductDependencies = (
+			);
+			productName = BliptWidget;
+			productReference = 118065DE430DE3833F1170B5 /* BliptWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		F6DB98E4AFC47352BF63255F /* BliptTests */ = {
 			isa = PBXNativeTarget;
@@ -589,6 +670,9 @@
 					1A8DFB51B2DDE475D0933258 = {
 						ProvisioningStyle = Automatic;
 					};
+					459B77CA2EEEC4F80D79E7AF = {
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = D7592082790735C3130CB135 /* Build configuration list for PBXProject "Blipt" */;
@@ -607,6 +691,7 @@
 			targets = (
 				1A8DFB51B2DDE475D0933258 /* Blipt */,
 				F6DB98E4AFC47352BF63255F /* BliptTests */,
+				459B77CA2EEEC4F80D79E7AF /* BliptWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -637,6 +722,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		808557072DA94C5C7830E908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAAAB4A285329ECEA753680C /* BliptWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB527190BADC844CA9233360 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -652,6 +745,7 @@
 				3E914D553D2EE6E15FDAD6C7 /* BrowseViewModel.swift in Sources */,
 				3DD1960095EB49BFAD41B4D0 /* CameraManager.swift in Sources */,
 				360FB9AF3A58A1FE2BE49AD1 /* CameraPreviewView.swift in Sources */,
+				6C7B4767CC8FD049F9DE9D4F /* CarPlaySceneDelegate.swift in Sources */,
 				6AE0B2B3E624CF2F135FE5F2 /* ChallanListView.swift in Sources */,
 				7D0ADCEAA43353792651AC76 /* CompareView.swift in Sources */,
 				219A9A1056CBDF4F6CF5FDFB /* ConnectivityMonitor.swift in Sources */,
@@ -702,6 +796,7 @@
 				9978FA58EC7CCB46EEA575B6 /* ReferralView.swift in Sources */,
 				B4B66492B5B7CF44C0311033 /* ResultViewModel.swift in Sources */,
 				ABFDA3DAB32AFF371BCD44DC /* ScanHistory.swift in Sources */,
+				2F46D4326F9F5ADA79E1DC3D /* ScanPlateIntent.swift in Sources */,
 				8976F114E6C1115687E23521 /* ScanResultSheet.swift in Sources */,
 				8F1B77EDEA920829AE173381 /* ScanView.swift in Sources */,
 				76220D6CDE5C1E3153006B80 /* ScanViewModel.swift in Sources */,
@@ -722,6 +817,7 @@
 				72355B84459B0CDAAFFC7554 /* VehicleInfo.swift in Sources */,
 				F554348A010347E6412D461F /* VerificationBadgeView.swift in Sources */,
 				5A47A432AECE42B4E4D0AF79 /* VisionOCRService.swift in Sources */,
+				868C4F1BB40F7A41DF6B5C95 /* WidgetDataBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +828,11 @@
 			isa = PBXTargetDependency;
 			target = 1A8DFB51B2DDE475D0933258 /* Blipt */;
 			targetProxy = 323D2A3956D275F48A9B9A0B /* PBXContainerItemProxy */;
+		};
+		B63C1E66CBCCA603269E8550 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 459B77CA2EEEC4F80D79E7AF /* BliptWidget */;
+			targetProxy = B0DFA81E5864F46DEB44F39D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -814,6 +915,24 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blipt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Blipt";
+			};
+			name = Debug;
+		};
+		46A8715480844629CC3532A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = BliptWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blipt.app.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -913,6 +1032,24 @@
 			};
 			name = Debug;
 		};
+		CB04B5A907A40A884F34473C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = BliptWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.blipt.app.widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		F07CAA941792EE9E2AD0E4F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -943,6 +1080,15 @@
 			buildConfigurations = (
 				C41D45F1D6A321F889B29BF7 /* Debug */,
 				F07CAA941792EE9E2AD0E4F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CEAE0EDAACC9A63B9B425CC5 /* Build configuration list for PBXNativeTarget "BliptWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46A8715480844629CC3532A2 /* Debug */,
+				CB04B5A907A40A884F34473C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

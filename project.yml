@@ -16,6 +16,7 @@ schemes:
     build:
       targets:
         Blipt: all
+        BliptWidget: all
     run:
       config: Debug
       storeKitConfiguration: Configuration.storekit
@@ -49,6 +50,22 @@ targets:
         ENABLE_PREVIEWS: true
     entitlements:
       path: Blipt/Blipt.entitlements
+    dependencies:
+      - target: BliptWidget
+        embed: true
+  BliptWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: BliptWidget
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.blipt.app.widget
+        INFOPLIST_FILE: BliptWidget/Info.plist
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
   BliptTests:
     type: bundle.unit-test
     platform: iOS

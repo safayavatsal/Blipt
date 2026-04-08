@@ -213,5 +213,8 @@ final class ScanViewModel {
         }
 
         historyStore.add(item)
+
+        // Update widget / watch / CarPlay
+        WidgetDataBridge.shared.updateWidgetData(from: historyStore)
     }
 }
