@@ -4,6 +4,8 @@ struct SettingsView: View {
     @Environment(AppState.self) private var appState
     @State private var showPaywall = false
     @State private var showSubmission = false
+    @State private var showReferral = false
+    @State private var showFleet = false
     @State private var subscriptionManager = SubscriptionManager()
 
     var body: some View {
@@ -37,6 +39,20 @@ struct SettingsView: View {
                     }
                 }
 
+                Section("Tools") {
+                    Button {
+                        showFleet = true
+                    } label: {
+                        Label("Fleet / Bulk Lookup", systemImage: "bus.doubledecker.fill")
+                    }
+
+                    Button {
+                        showReferral = true
+                    } label: {
+                        Label("Refer a Friend", systemImage: "gift.fill")
+                    }
+                }
+
                 Section("Community") {
                     Button {
                         showSubmission = true
@@ -62,6 +78,12 @@ struct SettingsView: View {
             }
             .sheet(isPresented: $showSubmission) {
                 DataSubmissionView(country: appState.selectedCountry)
+            }
+            .sheet(isPresented: $showReferral) {
+                ReferralView()
+            }
+            .sheet(isPresented: $showFleet) {
+                FleetView()
             }
         }
     }

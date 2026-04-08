@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from Backend.routers import health, vahan, countries, submissions
+from Backend.routers import health, vahan, countries, submissions, fleet
 from Backend.middleware.rate_limiter import rate_limit_middleware
 
 app = FastAPI(title="Blipt API", version="1.0.0")
@@ -37,3 +37,4 @@ app.include_router(health.router)
 app.include_router(vahan.router)
 app.include_router(countries.router)
 app.include_router(submissions.router)
+app.include_router(fleet.router)

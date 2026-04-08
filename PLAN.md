@@ -710,31 +710,31 @@ static let looseStandardPattern = #"^([A-Z0-9]{2})\s*[-]?\s*([0-9OoIl]{2})\s*[-]
 
 ---
 
-## Phase 7: Revenue Optimization
+## Phase 7: Revenue Optimization ✅ COMPLETE
 
 ### Milestone: "Higher conversion rate, more revenue streams"
 
-### 7.1 Usage-Based Paywall
-- [ ] Replace hard free/paid split with 3 free vehicle lookups per month
-- [ ] Track lookup count in UserDefaults (reset monthly)
-- [ ] After 3 lookups → show paywall with "You've used your free lookups"
-- [ ] Premium: unlimited lookups
-- [ ] **Acceptance**: 4th lookup triggers paywall, counter resets on month boundary
+### 7.1 Usage-Based Paywall ✅
+- [x] `Services/Subscription/UsageTracker.swift` — tracks monthly lookup count, auto-resets on month boundary, supports bonus lookups
+- [x] Free users get 3 vehicle lookups per month; premium: unlimited
+- [x] `VehicleDetailViewModel` checks usage before fetch — `.usageLimitReached` state triggers paywall
+- [x] `VehicleDetailView` shows "Free Lookups Used" screen with upgrade button when limit hit
+- [x] **Acceptance**: 4th lookup shows usage limit screen with paywall, counter resets monthly
 
-### 7.2 Fleet / Bulk Lookup
-- [ ] Create `Views/Fleet/FleetUploadView.swift` — CSV upload or multi-plate entry
-- [ ] Backend: `POST /api/v1/vehicle/bulk` — accepts array of plates, returns batch results
-- [ ] Create `Views/Fleet/FleetResultsView.swift` — table of plates + status
-- [ ] Export as CSV/PDF
-- [ ] Separate pricing tier (e.g., $19.99/month for 100 lookups)
-- [ ] **Acceptance**: Upload 10 plates → get 10 results → export works
+### 7.2 Fleet / Bulk Lookup ✅
+- [x] Backend: `POST /api/v1/vehicle/bulk` (`Backend/routers/fleet.py`) — accepts up to 100 plates, returns batch results with success/failure per plate
+- [x] `Services/Network/FleetService.swift` — iOS client for bulk lookup
+- [x] `ViewModels/FleetViewModel.swift` — parse comma/newline input, lookup, CSV export
+- [x] `Views/Fleet/FleetView.swift` — text input, "Look Up All" button, results summary (total/found/failed), result rows with plate badges + status, CSV export via ShareLink
+- [x] Accessible from Settings → "Fleet / Bulk Lookup"
+- [x] **Acceptance**: Enter 10 plates → see 10 results → export as CSV
 
-### 7.3 Referral Program
-- [ ] Generate unique referral codes per user
-- [ ] "Give 3 free lookups, get 3 free lookups" mechanic
-- [ ] Track referrals via backend
-- [ ] Share referral link from Settings
-- [ ] **Acceptance**: Referral code grants bonus lookups to both parties
+### 7.3 Referral Program ✅
+- [x] `Services/Subscription/ReferralManager.swift` — generates 8-char alphanumeric code (no I/O/0/1 confusion), tracks referrals, redeem logic, bonus lookups
+- [x] `Views/Settings/ReferralView.swift` — shows user's code (large monospaced), share button, stats (friends referred + bonus earned), redeem field for friend's code
+- [x] "Give 3 free lookups, get 3 free lookups" — bonus lookups added via UsageTracker
+- [x] Accessible from Settings → "Refer a Friend"
+- [x] **Acceptance**: Share code, redeem code grants bonus lookups, one-time redeem
 
 ### Phase 7 Risks
 

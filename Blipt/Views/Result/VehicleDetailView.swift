@@ -2,6 +2,7 @@ import SwiftUI
 
 struct VehicleDetailView: View {
     @State private var viewModel: VehicleDetailViewModel
+    @State private var showPaywall = false
 
     init(plate: String, isPremium: Bool) {
         _viewModel = State(initialValue: VehicleDetailViewModel(plate: plate, isPremium: isPremium))
@@ -19,6 +20,8 @@ struct VehicleDetailView: View {
                     vehicleContent(vehicle)
                 case .error(let message):
                     errorContent(message)
+                case .usageLimitReached:
+                    usageLimitContent
                 }
             }
             .background(Color.black)
@@ -144,6 +147,48 @@ struct VehicleDetailView: View {
             Spacer()
         }
         .padding()
+    }
+
+    private var usageLimitContent: some View {
+        VStack(spacing: 20) {
+            Spacer()
+            Image(systemName: "gauge.with.needle.fill")
+                .font(.system(size: 56))
+                .foregroundStyle(BliptTheme.premiumGold)
+            Text("Free Lookups Used")
+                .font(.title3.bold())
+                .foregroundStyle(.white)
+            Text("You've used all 3 free vehicle lookups this month. Upgrade for unlimited access.")
+                .font(.subheadline)
+                .foregroundStyle(.white.opacity(0.5))
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 32)
+
+            Button {
+                showPaywall = true
+            } label: {
+                Text("Upgrade to Premium")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 14)
+                    .background(
+                        LinearGradient(
+                            colors: [BliptTheme.accent, BliptTheme.accentDeep],
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                    .contentShape(RoundedRectangle(cornerRadius: 14))
+            }
+            .padding(.horizontal, 24)
+
+            Spacer()
+        }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
+        }
     }
 
     private func formatPlate(_ raw: String) -> String {

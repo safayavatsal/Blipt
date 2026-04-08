@@ -18,6 +18,7 @@
 		22F0967F2A593639CC1EDFFD /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50C64F875721B25B0B7435 /* PaywallView.swift */; };
 		2530AE2644AFD1048C71ED1F /* PlateParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E2D812E811229A7B82112 /* PlateParserProtocol.swift */; };
 		26C8CD27E17DF7F30305DB94 /* StateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BA823BA447F8C51A0FFC8 /* StateDetailView.swift */; };
+		28287AC28D483B1C19B7B306 /* FleetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FB57AD3D41FBE75FC6CFB5 /* FleetViewModel.swift */; };
 		2A19B468700DADA61EBFA9C7 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F1C553BDE793F34C26F2C7 /* SplashView.swift */; };
 		2A2924FD89C72F44EE721AC8 /* SubmissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B6738809BAEC057F2AB8E0 /* SubmissionService.swift */; };
 		2ABBDF75C8983ACD25420CF2 /* BliptApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A180083D474E2A2FE11C3FA /* BliptApp.swift */; };
@@ -33,6 +34,7 @@
 		3F17B190E6B8CEE6468CEB85 /* PlateNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055EED2D6DF6EF42A4167DB4 /* PlateNormalizer.swift */; };
 		418B0DA0AD860310C098B4FE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24543A9221615A89FFBE0F /* Theme.swift */; };
 		425482B403C9A706C3AFBC02 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E258B5C16E68B876D13F7 /* Country.swift */; };
+		48B091D8106C537CBCABD07C /* ReferralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887D473CFA838D0081F69EA /* ReferralManager.swift */; };
 		496A252E84F0D241D5DCE2AF /* FeatureComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAD5AC867FBAD352446B099 /* FeatureComparisonView.swift */; };
 		4CD398CC1E153D813F88E680 /* SubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808C64D1D8C805C3A81B8F4F /* SubscriptionViewModel.swift */; };
 		4F9B97E074A720474E4BBB7A /* PlateResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3181CE6F49BBF4FF0E738B4 /* PlateResultView.swift */; };
@@ -46,6 +48,7 @@
 		5A469B99ACD3B9F0D6516A5B /* FitnessCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C06F7BFF495ECB30B14340 /* FitnessCardView.swift */; };
 		5A47A432AECE42B4E4D0AF79 /* VisionOCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530CA83660FB6792CFA6CBA /* VisionOCRService.swift */; };
 		5D92370D697EF6309244C3D0 /* IndianState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82A377E761B15AE7185E77 /* IndianState.swift */; };
+		6504593AA1061DC672F49D77 /* UsageTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C25F4F20724632C6FA38F1 /* UsageTracker.swift */; };
 		654DB7E1C71D84DB5F00F5EA /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F702956D19ED562953639 /* SubscriptionManager.swift */; };
 		6AE0B2B3E624CF2F135FE5F2 /* ChallanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4B99292025828FE123D64 /* ChallanListView.swift */; };
 		6B84F47B95090F24E2E18176 /* PlateOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD6670CF3499FBB604C7823 /* PlateOverlayView.swift */; };
@@ -53,6 +56,7 @@
 		72355B84459B0CDAAFFC7554 /* VehicleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94EE644FBA2D2746D5A5D9 /* VehicleInfo.swift */; };
 		730704C47D6F4B9C6218FC18 /* DataSubmissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DFE7303EF639CEBDB636CB /* DataSubmissionView.swift */; };
 		76220D6CDE5C1E3153006B80 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA63FCEC68119ADE5321334 /* ScanViewModel.swift */; };
+		78413DB6FDDD9A5D7CAAED50 /* FleetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E24C3BBD7C4C56486306DA8 /* FleetView.swift */; };
 		79113B56013677D50B88C42F /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4124ADA2ECA1462AD84E51 /* AnalyticsService.swift */; };
 		7971483FB3F299AD1AD5241F /* MoroccanPlateParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14C597E93464B526DBC8168 /* MoroccanPlateParserTests.swift */; };
 		7AE68E78A37297A2E7E93CDE /* IndianPlateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B57F4C3CF3750A8496E4262 /* IndianPlateParser.swift */; };
@@ -67,6 +71,7 @@
 		95470A8045C0E26350AFCDBF /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8980D5E76559A6E1E135275 /* HistoryView.swift */; };
 		964DC6873E9494FD50D205F2 /* ManualEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59276C8E12F136F384AFB8F7 /* ManualEntryView.swift */; };
 		98D40A11840CAD4547967517 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2310273C2A8ED5056D3BCB82 /* AppConstants.swift */; };
+		9978FA58EC7CCB46EEA575B6 /* ReferralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DBE594E6E6A909F83634B /* ReferralView.swift */; };
 		9D54FBEF1D76B0FB193DCED0 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92777237A863E624E977763 /* DependencyContainer.swift */; };
 		A326370A9C14CE5032BE2C7A /* CountryDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077EDAAD09E4791C57152EC /* CountryDataServiceProtocol.swift */; };
 		AB6370D5A70B8658EAB4BC7C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB69839004EF62D9034E520 /* APIError.swift */; };
@@ -79,6 +84,7 @@
 		C9970405B803394FD9C655F5 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B7558AEB226436EC798BA /* HistoryViewModel.swift */; };
 		CFEBE8E5FDAE1B01EECB6601 /* PlateDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E742C282B878B11CC6A53553 /* PlateDetector.swift */; };
 		DC21A5AA1336AF629ED3C7E6 /* ShareCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC4AAC064E00B95A64B61E8 /* ShareCardView.swift */; };
+		DD0957DF45862680A7F57231 /* FleetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAC7BEE9746ECC2085E2380 /* FleetService.swift */; };
 		DF87E18DA14DC785F8D7FEB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F011E99F2D74D97F86369 /* ContentView.swift */; };
 		E13DB8237BCD34657077D800 /* ImagePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F6200865669492A623D132 /* ImagePreprocessor.swift */; };
 		E82624E10E2D709CDFC27BAC /* MapSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E42B86F14D4BEA121A54337 /* MapSnippetView.swift */; };
@@ -114,9 +120,11 @@
 		2310273C2A8ED5056D3BCB82 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		246846DEC263EEE9C1483264 /* MockOCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOCRService.swift; sourceTree = "<group>"; };
 		2C105008E7448D61F011277A /* Configuration.storekit */ = {isa = PBXFileReference; path = Configuration.storekit; sourceTree = "<group>"; };
+		2E24C3BBD7C4C56486306DA8 /* FleetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetView.swift; sourceTree = "<group>"; };
 		2F6E47C96DE5711021E831E2 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
 		3077EDAAD09E4791C57152EC /* CountryDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataServiceProtocol.swift; sourceTree = "<group>"; };
 		33F6200865669492A623D132 /* ImagePreprocessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreprocessor.swift; sourceTree = "<group>"; };
+		3887D473CFA838D0081F69EA /* ReferralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralManager.swift; sourceTree = "<group>"; };
 		3C2B945617C9139B74215F29 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		3D5AB3E80D2BFB3912AA695C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		45B6738809BAEC057F2AB8E0 /* SubmissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionService.swift; sourceTree = "<group>"; };
@@ -155,11 +163,13 @@
 		9FC9DBC331617ABF93BCC0BB /* RTORowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTORowView.swift; sourceTree = "<group>"; };
 		A14C597E93464B526DBC8168 /* MoroccanPlateParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoroccanPlateParserTests.swift; sourceTree = "<group>"; };
 		A530CA83660FB6792CFA6CBA /* VisionOCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOCRService.swift; sourceTree = "<group>"; };
+		A5FB57AD3D41FBE75FC6CFB5 /* FleetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetViewModel.swift; sourceTree = "<group>"; };
 		ABF997ABBA18EDBEDEDF8652 /* VehicleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewModel.swift; sourceTree = "<group>"; };
 		ACAD5AC867FBAD352446B099 /* FeatureComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureComparisonView.swift; sourceTree = "<group>"; };
 		ACD6670CF3499FBB604C7823 /* PlateOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateOverlayView.swift; sourceTree = "<group>"; };
 		ADA63FCEC68119ADE5321334 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		AED6C00B82FFDF750B5BA472 /* ScanHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanHistory.swift; sourceTree = "<group>"; };
+		B1C25F4F20724632C6FA38F1 /* UsageTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageTracker.swift; sourceTree = "<group>"; };
 		B3036C26BC5E56095CA39EAF /* PaywallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallManager.swift; sourceTree = "<group>"; };
 		B605E1F47FB919EC51E03FF6 /* VehicleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDetailView.swift; sourceTree = "<group>"; };
 		B73E258B5C16E68B876D13F7 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -174,6 +184,7 @@
 		D8980D5E76559A6E1E135275 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		E3181CE6F49BBF4FF0E738B4 /* PlateResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateResultView.swift; sourceTree = "<group>"; };
 		E742C282B878B11CC6A53553 /* PlateDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateDetector.swift; sourceTree = "<group>"; };
+		E90DBE594E6E6A909F83634B /* ReferralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferralView.swift; sourceTree = "<group>"; };
 		E998EFF15FA73173A1F9C2C6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EB7C42F58C3272ED4EBFC4DC /* FuzzyMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyMatcher.swift; sourceTree = "<group>"; };
 		EDE18645DDBC27584C5216B3 /* PlateVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlateVisualizerView.swift; sourceTree = "<group>"; };
@@ -181,6 +192,7 @@
 		EF2704F6AD0B82D62FB21682 /* MoroccanCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoroccanCity.swift; sourceTree = "<group>"; };
 		EFC4B99292025828FE123D64 /* ChallanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallanListView.swift; sourceTree = "<group>"; };
 		F3EA1F54C337E5F2160009F3 /* IndianPlateParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndianPlateParserTests.swift; sourceTree = "<group>"; };
+		FBAC7BEE9746ECC2085E2380 /* FleetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FleetService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -249,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				1803AF99ECDE30266BDB306B /* BrowseViewModel.swift */,
+				A5FB57AD3D41FBE75FC6CFB5 /* FleetViewModel.swift */,
 				5E3B7558AEB226436EC798BA /* HistoryViewModel.swift */,
 				9EC5C7E15E745CA7F16180A7 /* ResultViewModel.swift */,
 				ADA63FCEC68119ADE5321334 /* ScanViewModel.swift */,
@@ -313,7 +326,9 @@
 			isa = PBXGroup;
 			children = (
 				B3036C26BC5E56095CA39EAF /* PaywallManager.swift */,
+				3887D473CFA838D0081F69EA /* ReferralManager.swift */,
 				C65F702956D19ED562953639 /* SubscriptionManager.swift */,
+				B1C25F4F20724632C6FA38F1 /* UsageTracker.swift */,
 			);
 			path = Subscription;
 			sourceTree = "<group>";
@@ -337,6 +352,14 @@
 				7D50C64F875721B25B0B7435 /* PaywallView.swift */,
 			);
 			path = Paywall;
+			sourceTree = "<group>";
+		};
+		84FD51F79B07A62E001DF330 /* Fleet */ = {
+			isa = PBXGroup;
+			children = (
+				2E24C3BBD7C4C56486306DA8 /* FleetView.swift */,
+			);
+			path = Fleet;
 			sourceTree = "<group>";
 		};
 		8697B433ED31B58714444E8D /* Services */ = {
@@ -390,6 +413,7 @@
 				C79E122CF5AC510DC0FC1A9E /* APIClient.swift */,
 				6FFD888CA8645DCE87A37C67 /* ConnectivityMonitor.swift */,
 				0676F2E83B035C7B6BD6926C /* DataUpdateService.swift */,
+				FBAC7BEE9746ECC2085E2380 /* FleetService.swift */,
 				45B6738809BAEC057F2AB8E0 /* SubmissionService.swift */,
 				048177084294BF8DF07F7D69 /* VahanAPIService.swift */,
 			);
@@ -439,6 +463,7 @@
 				63F1C553BDE793F34C26F2C7 /* SplashView.swift */,
 				E6FC17C55F9CA30F53686CFB /* Browse */,
 				90926709CA88E3B62FC61975 /* Components */,
+				84FD51F79B07A62E001DF330 /* Fleet */,
 				30B46B4E51BF0F4084804544 /* History */,
 				8894D1ED103A2589E6545F75 /* Onboarding */,
 				7F882C174FCC51B10B9068DF /* Paywall */,
@@ -453,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				45DFE7303EF639CEBDB636CB /* DataSubmissionView.swift */,
+				E90DBE594E6E6A909F83634B /* ReferralView.swift */,
 				3D5AB3E80D2BFB3912AA695C /* SettingsView.swift */,
 			);
 			path = Settings;
@@ -614,6 +640,9 @@
 				1206A7DF903EA358298085D2 /* ErrorBannerView.swift in Sources */,
 				496A252E84F0D241D5DCE2AF /* FeatureComparisonView.swift in Sources */,
 				5A469B99ACD3B9F0D6516A5B /* FitnessCardView.swift in Sources */,
+				DD0957DF45862680A7F57231 /* FleetService.swift in Sources */,
+				78413DB6FDDD9A5D7CAAED50 /* FleetView.swift in Sources */,
+				28287AC28D483B1C19B7B306 /* FleetViewModel.swift in Sources */,
 				3257DF005B0EFA59142AF14A /* FuzzyMatcher.swift in Sources */,
 				95470A8045C0E26350AFCDBF /* HistoryView.swift in Sources */,
 				C9970405B803394FD9C655F5 /* HistoryViewModel.swift in Sources */,
@@ -642,6 +671,8 @@
 				53316646290803EFA2569541 /* RTODataService.swift in Sources */,
 				84653C8528440A325A07F4E4 /* RTOOffice.swift in Sources */,
 				1159F3A79D8F9FE9E05EFCFE /* RTORowView.swift in Sources */,
+				48B091D8106C537CBCABD07C /* ReferralManager.swift in Sources */,
+				9978FA58EC7CCB46EEA575B6 /* ReferralView.swift in Sources */,
 				B4B66492B5B7CF44C0311033 /* ResultViewModel.swift in Sources */,
 				ABFDA3DAB32AFF371BCD44DC /* ScanHistory.swift in Sources */,
 				8976F114E6C1115687E23521 /* ScanResultSheet.swift in Sources */,
@@ -656,6 +687,7 @@
 				50EA10391555155D9465BC43 /* SubscriptionProduct.swift in Sources */,
 				4CD398CC1E153D813F88E680 /* SubscriptionViewModel.swift in Sources */,
 				418B0DA0AD860310C098B4FE /* Theme.swift in Sources */,
+				6504593AA1061DC672F49D77 /* UsageTracker.swift in Sources */,
 				57F5569FD8D895EAB2D95884 /* VahanAPIResponse.swift in Sources */,
 				00B4C950DB07EEE3DA6E2FDE /* VahanAPIService.swift in Sources */,
 				21BA4CA02275E792AFB2029C /* VehicleDetailView.swift in Sources */,
