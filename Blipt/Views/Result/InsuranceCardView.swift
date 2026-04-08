@@ -3,6 +3,8 @@ import SwiftUI
 struct InsuranceCardView: View {
     let company: String?
     let validUntil: Date?
+    var plate: String = ""
+    @State private var reminderSet = false
 
     private var status: InsuranceStatus {
         guard let validUntil else { return .unknown }
@@ -43,6 +45,29 @@ struct InsuranceCardView: View {
                         .font(.subheadline.weight(.medium))
                 }
                 .font(.subheadline)
+
+                // Remind button
+                if !plate.isEmpty && status != .expired {
+                    Button {
+                        Task {
+                            await NotificationManager.shared.scheduleInsuranceReminder(plate: plate, expiryDate: validUntil)
+                            reminderSet = true
+                        }
+                    } label: {
+                        Label(
+                            reminderSet ? "Reminder Set" : "Remind Before Expiry",
+                            systemImage: reminderSet ? "checkmark.circle.fill" : "bell.fill"
+                        )
+                        .font(.caption.weight(.medium))
+                        .foregroundStyle(reminderSet ? BliptTheme.radarGreen : BliptTheme.accent)
+                        .padding(.vertical, 8)
+                        .frame(maxWidth: .infinity)
+                        .background((reminderSet ? BliptTheme.radarGreen : BliptTheme.accent).opacity(0.1))
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .contentShape(RoundedRectangle(cornerRadius: 8))
+                    }
+                    .disabled(reminderSet)
+                }
             }
         }
         .padding()

@@ -195,7 +195,7 @@ final class ScanViewModel {
     // MARK: - History
 
     private func saveToHistory(plate: PlateParseResult, location: LocationInfo?) {
-        let item = ScanHistoryItem(
+        var item = ScanHistoryItem(
             plate: plate.rawText,
             normalizedPlate: plate.normalizedPlate,
             stateName: location?.stateName,
@@ -206,6 +206,12 @@ final class ScanViewModel {
             format: plate.format.rawValue,
             confidence: plate.confidence
         )
+
+        // Save photo if available
+        if let image = capturedImage {
+            item.photoFilename = PlatePhotoStore.shared.save(image, for: item.id)
+        }
+
         historyStore.add(item)
     }
 }

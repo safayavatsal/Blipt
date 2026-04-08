@@ -45,6 +45,9 @@ struct VehicleDetailView: View {
                     format: .standard
                 ))
 
+                // Verification badge
+                VerificationBadgeView(level: VerificationLevel.compute(from: vehicle))
+
                 // Vehicle info card
                 vehicleInfoCard(vehicle)
 
@@ -54,7 +57,8 @@ struct VehicleDetailView: View {
                 // Insurance
                 InsuranceCardView(
                     company: vehicle.insuranceCompany,
-                    validUntil: vehicle.insuranceUpto
+                    validUntil: vehicle.insuranceUpto,
+                    plate: vehicle.registrationNumber
                 )
 
                 // Fitness

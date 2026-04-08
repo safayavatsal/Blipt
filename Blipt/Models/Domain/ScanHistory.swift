@@ -12,6 +12,7 @@ struct ScanHistoryItem: Codable, Identifiable, Equatable {
     let format: String // "standard", "bhSeries", "moroccan"
     let confidence: Double
     let timestamp: Date
+    var photoFilename: String?
 
     init(
         plate: String,
@@ -23,7 +24,8 @@ struct ScanHistoryItem: Codable, Identifiable, Equatable {
         country: String,
         format: String,
         confidence: Double,
-        timestamp: Date = .now
+        timestamp: Date = .now,
+        photoFilename: String? = nil
     ) {
         self.id = UUID()
         self.plate = plate
@@ -36,6 +38,7 @@ struct ScanHistoryItem: Codable, Identifiable, Equatable {
         self.format = format
         self.confidence = confidence
         self.timestamp = timestamp
+        self.photoFilename = photoFilename
     }
 }
 

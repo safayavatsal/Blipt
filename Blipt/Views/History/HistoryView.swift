@@ -109,18 +109,28 @@ struct HistoryRowView: View {
 
     var body: some View {
         HStack(spacing: 14) {
-            // Plate badge
-            Text(item.normalizedPlate)
-                .font(.system(size: 13, weight: .bold, design: .monospaced))
-                .foregroundStyle(.black)
-                .padding(.horizontal, 8)
-                .padding(.vertical, 6)
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 4))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 4)
-                        .stroke(.gray.opacity(0.3), lineWidth: 1)
-                )
+            // Photo thumbnail or plate badge
+            if let filename = item.photoFilename,
+               let thumb = PlatePhotoStore.shared.thumbnail(filename: filename, size: 44) {
+                Image(uiImage: thumb)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 44, height: 44)
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+            } else {
+                Text(item.normalizedPlate)
+                    .font(.system(size: 11, weight: .bold, design: .monospaced))
+                    .foregroundStyle(.black)
+                    .padding(.horizontal, 6)
+                    .padding(.vertical, 6)
+                    .frame(minWidth: 44)
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 4))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 4)
+                            .stroke(.gray.opacity(0.3), lineWidth: 1)
+                    )
+            }
 
             VStack(alignment: .leading, spacing: 3) {
                 if let state = item.stateName {
