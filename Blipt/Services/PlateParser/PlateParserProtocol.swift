@@ -13,6 +13,12 @@ enum PlateParserFactory {
             IndianPlateParser()
         case .morocco:
             MoroccanPlateParser()
+        case .uae:
+            UAEPlateParser()
+        case .saudiArabia:
+            SaudiPlateParser()
+        case .uk:
+            UKPlateParser()
         }
     }
 }

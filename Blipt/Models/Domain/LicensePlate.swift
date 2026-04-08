@@ -12,12 +12,18 @@ enum PlateComponents: Equatable {
     case indian(state: String, rtoCode: String, series: String, number: String)
     case indianBH(year: String, number: String, category: String)
     case moroccan(cityCode: Int)
+    case uae(emirate: String, category: String, number: String)
+    case saudi(region: String, sequence: String, number: String)
+    case uk(ageIdentifier: String, area: String, random: String)
 }
 
 enum PlateFormat: String {
     case standard
     case bhSeries
     case moroccan
+    case uae
+    case saudi
+    case uk
 }
 
 struct LocationInfo: Equatable {

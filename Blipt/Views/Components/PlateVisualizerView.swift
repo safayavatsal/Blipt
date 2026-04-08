@@ -40,7 +40,9 @@ struct PlateVisualizerView: View {
         switch plate.format {
         case .standard: .white
         case .bhSeries: Color(red: 1.0, green: 0.85, blue: 0.0) // Indian yellow plate
-        case .moroccan: .white
+        case .moroccan, .saudi: .white
+        case .uae: .white
+        case .uk: .white
         }
     }
 }

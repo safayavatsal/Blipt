@@ -48,9 +48,14 @@ final class ScanViewModel {
         self.plateDetector = PlateDetector(parser: PlateParserFactory.parser(for: country))
 
         // Set correct data service
+        self.dataService = Self.dataService(for: country, indian: indianDataService, morocco: moroccoDataService)
+    }
+
+    private static func dataService(for country: Country, indian: RTODataService, morocco: MoroccoDataService) -> CountryDataServiceProtocol {
         switch country {
-        case .india: self.dataService = indianDataService
-        case .morocco: self.dataService = moroccoDataService
+        case .india: indian
+        case .morocco: morocco
+        case .uae, .saudiArabia, .uk: GenericDataService(country: country)
         }
     }
 
@@ -59,11 +64,7 @@ final class ScanViewModel {
         country = newCountry
         parser = PlateParserFactory.parser(for: newCountry)
         plateDetector = PlateDetector(parser: parser)
-
-        switch newCountry {
-        case .india: dataService = indianDataService
-        case .morocco: dataService = moroccoDataService
-        }
+        dataService = Self.dataService(for: newCountry, indian: indianDataService, morocco: moroccoDataService)
 
         reset()
         Task { await loadDataIfNeeded() }

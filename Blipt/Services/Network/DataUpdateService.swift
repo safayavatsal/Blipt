@@ -81,6 +81,9 @@ final class DataUpdateService {
         switch country {
         case .india: filename = "indian_rto_data.json"
         case .morocco: filename = "moroccan_cities.json"
+        case .uae: filename = "uae_emirates.json"
+        case .saudiArabia: filename = "saudi_regions.json"
+        case .uk: filename = "uk_regions.json"
         }
         let url = docs.appendingPathComponent(filename)
         try data.write(to: url)

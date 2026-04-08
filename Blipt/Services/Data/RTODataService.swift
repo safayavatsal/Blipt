@@ -64,8 +64,8 @@ final class RTODataService: CountryDataServiceProtocol {
                 coordinate: Coordinate(lat: 28.6139, lng: 77.2090) // New Delhi
             )
 
-        case .moroccan:
-            return nil // Handled by MoroccoDataService
+        case .moroccan, .uae, .saudi, .uk:
+            return nil // Handled by respective data services
         }
     }
 

@@ -1,0 +1,78 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "app.name" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Blipt" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "Blipt" } }
+      }
+    },
+    "app.tagline" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Vehicle Intelligence, Instantly." } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "वाहन जानकारी, तुरंत।" } },
+        "mr" : { "stringUnit" : { "state" : "translated", "value" : "वाहन माहिती, त्वरित." } },
+        "ta" : { "stringUnit" : { "state" : "translated", "value" : "வாகன நுண்ணறிவு, உடனடியாக." } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "معلومات المركبات، فوراً." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Intelligence véhicule, instantanément." } }
+      }
+    },
+    "scan.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Scan" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "स्कैन" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "مسح" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Scanner" } }
+      }
+    },
+    "scan.hint" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Point camera at a license plate" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "कैमरा नंबर प्लेट की ओर करें" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "وجه الكاميرا نحو لوحة الترخيص" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Pointez la caméra vers une plaque" } }
+      }
+    },
+    "history.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "History" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "इतिहास" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "السجل" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Historique" } }
+      }
+    },
+    "browse.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Browse" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "ब्राउज़" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تصفح" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Parcourir" } }
+      }
+    },
+    "settings.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Settings" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "सेटिंग्स" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الإعدادات" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Paramètres" } }
+      }
+    },
+    "premium.upgrade" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Upgrade to Premium" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "प्रीमियम में अपग्रेड करें" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الترقية إلى بريميوم" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Passer à Premium" } }
+      }
+    },
+    "result.notFound" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Location not found" } },
+        "hi" : { "stringUnit" : { "state" : "translated", "value" : "स्थान नहीं मिला" } },
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "الموقع غير موجود" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Lieu non trouvé" } }
+      }
+    }
+  },
+  "version" : "1.0"
+}

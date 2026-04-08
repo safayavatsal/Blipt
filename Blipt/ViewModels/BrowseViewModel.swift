@@ -18,6 +18,7 @@ final class BrowseViewModel {
         switch country {
         case .india: self.dataService = indianDataService
         case .morocco: self.dataService = moroccoDataService
+        case .uae, .saudiArabia, .uk: self.dataService = GenericDataService(country: country)
         }
     }
 
@@ -27,6 +28,7 @@ final class BrowseViewModel {
         switch newCountry {
         case .india: dataService = indianDataService
         case .morocco: dataService = moroccoDataService
+        case .uae, .saudiArabia, .uk: dataService = GenericDataService(country: newCountry)
         }
         regions = []
         Task { await loadData() }
